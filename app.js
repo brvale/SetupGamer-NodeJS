@@ -9,5 +9,5 @@ app.get("/", (req,res) => {
 });
 
 app.listen(5050, () => {
-    console.log("Servidor ligado!")
+    console.log("Servidor ligado: http://localhost:5050/")
 });
