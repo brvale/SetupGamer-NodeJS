@@ -32,7 +32,7 @@ nav {
     border-width: thin;
 }
 
-.signup:hover {
+.signup:hover, .footer-enviar:hover {
     background-color: #1e7209d7;
     color: white;
     border-color: #1e7209d8;
