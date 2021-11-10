@@ -84,7 +84,7 @@ div.menu-bar ul li a:hover {
 }
 
 /*********** Footer ***********/
-footer img {
+footer img.banner {
     border-top: solid #35C910;
     border-width: thin;
     padding-top: 20px;
@@ -100,6 +100,7 @@ footer div.container {
 
 .receber-emails {
     background-color: rgba(87, 87, 87, 0.37);
+    margin-bottom: 40px;
 }
 
 .receber-emails h2 {
@@ -127,4 +128,40 @@ footer div.container {
     border: none;
     border-radius: 4px;
     font-size: large;
+}
+
+footer img.logo-footer {
+    margin-left: 11%;
+    margin-top: 60px;
+    height: 25vh;
+    width: 20vw;
+}
+
+footer div.container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div.footer-info {
+    margin-right: 9%;
+    display: flex;
+}
+
+footer .institucional {
+    margin-right: 20px;
+}
+
+footer div.footer-info ul {
+    list-style: none;
+    font-size: large;
+    color: white;
+}
+
+footer div.footer-info li{
+    margin-bottom: 15px;
+}
+
+footer h3 {
+    margin-top: 0;
+    margin-bottom: 35px;
 }
