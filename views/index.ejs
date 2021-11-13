@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/background.css">
     <link rel="stylesheet" href="/stylesheets/logo.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
     <title>Página inicial</title>
 </head>
 <body>
@@ -14,7 +15,29 @@
         <%- include("./includes/header")  %> 
     </header>
     <main>
-
+        <div class="carousel">
+            <div data-js="carousel__item" class="carousel__item carousel__item--visible">
+              <img src="https://s19.postimg.cc/qzj5uncgj/slide1.jpg" />
+            </div>
+        
+            <div data-js="carousel__item" class="carousel__item">
+              <img src="https://s19.postimg.cc/lmubh3h0j/slide2.jpg" />
+            </div>
+        
+            <div data-js="carousel__item" class="carousel__item">
+              <img src="https://s19.postimg.cc/99hh9lr5v/slide3.jpg" />
+            </div>
+        
+            <div class="carousel__actions">
+              <button data-js="carousel__button--prev" aria-label="Slide anterior">
+                <
+              </button>
+        
+              <button data-js="carousel__button--next" aria-label="Próximo slide">
+                >
+              </button>
+            </div>
+          </div>
     </main>
     <footer>
         <%- include("./includes/footer") %> 

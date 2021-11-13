@@ -7,7 +7,7 @@ body {
 /*********** Header ***********/
 nav {
     width: 100%;
-    height: 90px;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +26,7 @@ nav {
     background-color: #35c910;
     margin-right: 5px;
     color: black;
-    font-size: 16px;
+    font-size: 1.6vh;
     border: solid #35c910;
     border-radius: 11px;
     border-width: thin;
@@ -40,6 +40,7 @@ nav {
 
 header nav p.pt{
     margin-right: 30px;
+    font-size: 1.6vh;
     color: #4e4e4eaf;
 }
 
@@ -51,7 +52,7 @@ header nav p.separador{
 }
 
 header nav img {
-    height: 30px;
+    height: 3vh;
     margin-left: 5px;
     position: relative;
 }
@@ -72,7 +73,7 @@ div.menu-bar ul li {
 div.menu-bar ul li a {
     padding: 18px;
     color: white;
-    font-size: 18px;
+    font-size: 2vh;
     text-decoration: none;
     display: block;
 }
@@ -80,6 +81,7 @@ div.menu-bar ul li a {
 div.menu-bar ul li a:hover {
     box-shadow: 0 0 10px rgb(0, 0, 0), inset 0 0 1px rgba(0, 0, 0, 0.877);
     background: rgba(34, 34, 34, 0.993);
+    height: 100%;
     color: #35C910
 }
 
@@ -87,10 +89,10 @@ div.menu-bar ul li a:hover {
 footer img.banner {
     border-top: solid #35C910;
     border-width: thin;
-    padding-top: 20px;
-    margin-top: 30px;
+    padding-top: 2vh;
+    margin-top: 5vh;
     width: 100%;
-    height: 17vh;
+    height: 15vh;
 }
 
 footer div.container {
@@ -100,12 +102,15 @@ footer div.container {
 
 .receber-emails {
     background-color: rgba(87, 87, 87, 0.37);
-    margin-bottom: 40px;
+    padding-bottom: 1.5vmax;
+    padding-top: 1.5vmax;
 }
 
 .receber-emails h2 {
     color: white;
+    font-size: 1.7vmax;
     margin-left: 11%;
+    margin-top: 0;
 }
 
 .receber-emails input.footer-nome {
@@ -113,28 +118,28 @@ footer div.container {
 }
 
 .receber-emails input {
-    height: 40px;
+    height: 4vh;
     width: 10vw;
-    margin-bottom: 20px;
-    font-size: large;
+    font-size: 1.2vw;
     border: none;
     border-radius: 4px;
 }
 
 .footer-enviar{
-    height: 42px;
+    height: 4vh;
     width: 4vw;
     background-color: #35C910;
     border: none;
     border-radius: 4px;
-    font-size: large;
+    font-size: 1.2vw;
 }
 
 footer img.logo-footer {
     margin-left: 11%;
-    margin-top: 60px;
-    height: 25vh;
-    width: 20vw;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+    height: 23vh;
+    width: 21vw;
 }
 
 footer div.container2 {
@@ -153,15 +158,15 @@ footer .institucional {
 
 footer div.footer-info ul {
     list-style: none;
-    font-size: large;
+    font-size: 1.2vmax;
     color: white;
 }
 
 footer div.footer-info li{
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
 }
 
 footer h3 {
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 4vh;
 }
