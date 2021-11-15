@@ -15,29 +15,100 @@
         <%- include("./includes/header")  %> 
     </header>
     <main>
-      <div class="carousel">
-          <div data-js="carousel__item" class="carousel__item carousel__item--visible">
-            <img src="https://s19.postimg.cc/qzj5uncgj/slide1.jpg" />
+      <!--Carrossel-->
+      <section class="carousel">
+        <div data-js="carousel__item" class="carousel__item carousel__item--visible">
+          <img src="https://s19.postimg.cc/qzj5uncgj/slide1.jpg" />
+        </div>
+    
+        <div data-js="carousel__item" class="carousel__item">
+          <img src="https://s19.postimg.cc/lmubh3h0j/slide2.jpg" />
+        </div>
+    
+        <div data-js="carousel__item" class="carousel__item">
+          <img src="https://s19.postimg.cc/99hh9lr5v/slide3.jpg" />
+        </div>
+    
+        <div class="carousel__actions">
+          <button data-js="carousel__button--prev" aria-label="Slide anterior">
+            <
+          </button>
+    
+          <button data-js="carousel__button--next" aria-label="Próximo slide">
+            >
+          </button>
+        </div>
+      </section>
+
+      <form action="">
+        <div class="search">
+          <input type="text" placeholder="O que você procura?">
+          <button type="submit"><img src="/img/lupa.png" alt="Buscar"></button>
+        </div>
+        
+      </form>
+
+      <!--Categorias-->
+      <section class="categories">
+        <div class="container1">
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <span class="stars"></span>
+                <h2 class="card-1">Novidades</h2>
+                <p class="card-1">Encontre aqui nossos produtos de lançamentos.</p>
+              </div>
+            </div>
+            <div class="face face2">
+              <h2>Novidades</h2>
+            </div>
           </div>
       
-          <div data-js="carousel__item" class="carousel__item">
-            <img src="https://s19.postimg.cc/lmubh3h0j/slide2.jpg" />
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <span class="stars"></span>
+                <h2 class="card-2">Mais comprados</h2>
+                <p class="card-2">Python is an interpreted, high-level and general-purpose programming language.</p>
+              </div>
+            </div>
+            <div class="face face2">
+              <h2>Mais comprados</h2>
+            </div>
           </div>
-      
-          <div data-js="carousel__item" class="carousel__item">
-            <img src="https://s19.postimg.cc/99hh9lr5v/slide3.jpg" />
+
+      </div>
+      <div class="container2">
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <span class="stars"></span>
+              <h2 class="card-3">Acessórios</h2>
+              <p class="card-3">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+            </div>
           </div>
-      
-          <div class="carousel__actions">
-            <button data-js="carousel__button--prev" aria-label="Slide anterior">
-              <
-            </button>
-      
-            <button data-js="carousel__button--next" aria-label="Próximo slide">
-              >
-            </button>
+          <div class="face face2">
+            <h2>Acessórios</h2>
           </div>
         </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <span class="stars"></span>
+              <h2 class="card-4">Economicos</h2>
+              <p class="card-4">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+            </div>
+          </div>
+          <div class="face face2">
+            <h2>Economicos</h2>
+          </div>
+        </div>
+
+      </div>
+      </section>
     </main>
     <footer>
         <%- include("./includes/footer") %> 
