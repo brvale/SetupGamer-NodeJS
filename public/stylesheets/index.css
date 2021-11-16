@@ -90,6 +90,10 @@
 }
 
 /*********** Categorias ***********/
+.categories h2, p {
+    text-align: center;
+}
+
 .container1, .container2 {
     max-width: 100vw;
     display: flex;
@@ -176,4 +180,7 @@
     );
     border-radius: 15px;
 }
+
+/*********** Carrossel de produtos ***********/
+
   
