@@ -3,6 +3,7 @@ const slides = document.querySelectorAll('[data-js="carousel__item"]')
 const nextButton = document.querySelector('[data-js="carousel__button--next"]')
 const prevButton = document.querySelector('[data-js="carousel__button--prev"]')
 
+const lastSlideIndex = slides.length - 1
 let currentSlideIndex = 0
 
 const manipulateSlidesClasses = correctSlideIndex => {
@@ -14,7 +15,7 @@ const manipulateSlidesClasses = correctSlideIndex => {
 }
 
 nextButton.addEventListener('click', () => {
-    const correctSlideIndex = currentSlideIndex === slides.length - 1
+    const correctSlideIndex = currentSlideIndex === lastSlideIndex
         ? currentSlideIndex = 0
         : ++currentSlideIndex
     
@@ -23,11 +24,19 @@ nextButton.addEventListener('click', () => {
 
 prevButton.addEventListener('click', () => {
     const correctSlideIndex = currentSlideIndex === 0
-        ? currentSlideIndex = slides.length - 1
+        ? currentSlideIndex = lastSlideIndex
         : --currentSlideIndex
     
     manipulateSlidesClasses(correctSlideIndex)
 })
+
+setInterval(() => {
+    const correctSlideIndex = currentSlideIndex === lastSlideIndex
+        ? currentSlideIndex = 0
+        : ++currentSlideIndex
+    
+    manipulateSlidesClasses(correctSlideIndex)
+}, 5000)
 
 
     

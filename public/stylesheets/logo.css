@@ -102,4 +102,10 @@
     100% {
         transform: translateX(-135%);
     }
-    }
+}
+
+@media (max-width: 366px) {
+  .deconstructed{
+    font-size: 2vh;
+  } 
+}

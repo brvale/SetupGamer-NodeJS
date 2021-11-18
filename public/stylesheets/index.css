@@ -103,12 +103,15 @@
 
 .card {
     position: relative;
-    margin-right: 5vh;
-    width: 550px;
-    height: 300px;
+    width: 28vw;
+    height: 35vh;
     background: #000;
     border-radius: 15px;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.card:nth-child(1) {
+    margin-right: 5vh;
 }
 
 .face {
@@ -130,6 +133,11 @@
 .face1 h2 {
     margin: 0;
     padding: 0;
+    font-size: 2vh;
+}
+
+.face1 p {
+    font-size: 1.5vh;
 }
 
 .card-1, .card-2, .card-3, .card-4 {
@@ -153,7 +161,7 @@
 }
 
 .card:hover .face.face2 {
-    height: 60px;
+    height: 5vh;
 }
 
 .card:hover .face.face2 h2 {
@@ -181,6 +189,12 @@
     border-radius: 15px;
 }
 
-/*********** Carrossel de produtos ***********/
+/*********** media ***********/
+@media (max-width: 530px) {
+    .card .face.face2 {
+        height: 5vh;
+    }
+}
+
 
   
