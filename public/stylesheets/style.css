@@ -1,14 +1,14 @@
 body {
     background-image: linear-gradient(
         180deg,
-        #242424 3%,
+        #242424 60%,
         black 90%,
         #35C910 100%
     );
     padding: 0;
     margin: 0;
     width: 100%;
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Cambay', sans-serif;
 }
 
 /*********** Header ***********/

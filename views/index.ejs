@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/logo.css">
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="/stylesheets/owl/owl.theme.default.min.css">
+
+    <!--JS-->
     <script defer src="/scripts/carousel.js"></script>
+    <script defer src="/scripts/owl/jquery.min.js"></script>
+    <script defer src="/scripts/owl/owl.carousel.min.js"></script>
+    <script defer src="/scripts/owl/config-carousel.js"></script>
+
     <title>Página inicial</title>
 </head>
 <body>
@@ -111,7 +121,41 @@
       </section>
 
       <!--Carrossel de produtos-->
-      
+      <section class="carrossel-filmes">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="/img/produtos/gabinete1.jpg" alt="">
+            <h3>Nome do kit</h3>
+            <button>Ver detalhes</button>
+          </div>
+          <div class="item">
+            <img src="/img/produtos/gabinete2.jpg" alt="">
+            <h3>Nome do kit</h3>
+            <button>Ver detalhes</button>
+          </div>
+          <div class="item">
+            <img src="/img/produtos/gabinete3.jpg" alt="">
+            <h3>Nome do kit</h3>
+            <button>Ver detalhes</button>
+          </div>
+          <div class="item">
+            <img src="/img/produtos/gabinete4.jpg" alt="">
+            <h3>Nome do kit</h3>
+            <button>Ver detalhes</button>
+          </div>
+          <div class="item">
+            <img src="/img/produtos/gabinete5.jpg" alt="">
+            <h3>Nome do kit</h3>
+            <button>Ver detalhes</button>
+          </div>
+          
+      </div>
+      </section>
+
+      <!--Cupom-->
+      <section class="cupom">
+        <button>CUPOM</button>
+      </section>
     </main>
     <footer>
         <%- include("./includes/footer") %> 

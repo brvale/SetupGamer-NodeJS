@@ -189,6 +189,46 @@
     border-radius: 15px;
 }
 
+/*********** Carrossel de produtos ***********/
+.carrossel-filmes {
+    margin: 7vh 20.7%;
+}
+
+.carrossel-filmes .item {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.carrossel-filmes .item h3 {
+    margin: 0;
+    background-color: #4e4e4eaf;
+    text-align: center;
+    color: white;
+}
+
+.carrossel-filmes .item button {
+    background-color: #35c910;
+    text-align: center;
+    color: white;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/*********** Carrossel de produtos ***********/
+.cupom button{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 0 20.7%;
+    padding: 3vh;
+    border: none;
+    font-size: 2vh;
+    width: 58.5%;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
 /*********** media ***********/
 @media (max-width: 530px) {
     .card .face.face2 {
