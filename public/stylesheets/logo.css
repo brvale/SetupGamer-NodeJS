@@ -4,7 +4,7 @@
     color: transparent;
     font-family: 'Cambay', sans-serif;
     font-style: italic;
-    font-size: 30px;
+    font-size: 3.5vh;
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.03em;
@@ -102,4 +102,10 @@
     100% {
         transform: translateX(-135%);
     }
-    }
+}
+
+@media (max-width: 366px) {
+  .deconstructed{
+    font-size: 2vh;
+  } 
+}
