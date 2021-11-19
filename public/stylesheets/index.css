@@ -226,6 +226,7 @@
     border: none;
     font-size: 2vh;
     width: 58.5%;
+    cursor: pointer;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 }
 
