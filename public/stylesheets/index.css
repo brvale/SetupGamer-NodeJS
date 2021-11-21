@@ -222,7 +222,7 @@
     justify-content: center;
     background-color: white;
     margin: 0 20.7%;
-    padding: 3vh;
+    padding: 0vh;
     border: none;
     font-size: 2vh;
     width: 58.5%;
@@ -235,6 +235,7 @@
         height: 5vh;
     }
 }
+
 
 
   

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--CSS-->
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/logo.css">
-    <link rel="stylesheet" href="/stylesheets/index.css">
-    <link rel="stylesheet" href="/stylesheets/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="/stylesheets/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/stylesheets/owl/owl.theme.default.min.css" />
 
     <!--JS-->
     <script defer src="/scripts/carousel.js"></script>
@@ -19,31 +19,36 @@
     <script defer src="/scripts/owl/config-carousel.js"></script>
 
     <title>Página inicial</title>
-</head>
-<body>
-    <header>
-        <%- include("./includes/header")  %> 
-    </header>
+  </head>
+  <body>
+    <header><%- include("./includes/header") %></header>
     <main>
       <!--Carrossel-->
       <section class="carousel">
-        <div data-js="carousel__item" class="carousel__item carousel__item--visible">
-          <img src="https://s19.postimg.cc/qzj5uncgj/slide1.jpg" />
+        <div
+          data-js="carousel__item"
+          class="carousel__item carousel__item--visible"
+        >
+          <img src="https://i.postimg.cc/dtmJh3BJ/blackfriday-2.jpg" />
         </div>
-    
+
         <div data-js="carousel__item" class="carousel__item">
-          <img src="https://s19.postimg.cc/lmubh3h0j/slide2.jpg" />
+          <img
+            src="https://i.postimg.cc/K4Xh1SKk/Premios-1400x636-1-t0gn-VG4.png"
+          />
         </div>
-    
+
         <div data-js="carousel__item" class="carousel__item">
-          <img src="https://s19.postimg.cc/99hh9lr5v/slide3.jpg" />
+          <img
+            src="https://i.postimg.cc/900yrs3h/ec463c3f739eb87926189cae5cfd0543.jpg"
+          />
         </div>
-    
+
         <div class="carousel__actions">
           <button data-js="carousel__button--prev" aria-label="Slide anterior">
             <
           </button>
-    
+
           <button data-js="carousel__button--next" aria-label="Próximo slide">
             >
           </button>
@@ -53,50 +58,60 @@
       <!--Procurar-->
       <form action="">
         <div class="search">
-          <input type="text" placeholder="O que você procura?">
-          <button type="submit"><img src="/img/lupa.png" alt="Buscar"></button>
+          <input type="text" placeholder="O que você procura?" />
+          <button type="submit">
+            <img src="/img/lupa.png" alt="Buscar" />
+          </button>
         </div>
       </form>
 
       <!--Categorias-->
       <section class="categories">
         <div class="container1">
-
           <div class="card">
             <div class="face face1">
               <div class="content">
                 <span class="stars"></span>
                 <h2 class="card-1">Procurando algo novo?</h2>
-                <p class="card-1">Venha dar uma conferida em nossos produtos de lançamentos.</p>
+                <p class="card-1">
+                  Venha dar uma conferida em nossos produtos de lançamentos.
+                </p>
               </div>
             </div>
             <div class="face face2">
               <h2>Novidades</h2>
             </div>
           </div>
-      
+
           <div class="card">
             <div class="face face1">
               <div class="content">
                 <span class="stars"></span>
-                <h2 class="card-2">Quer saber quais os produtos que a galera mais compra?</h2>
-                <p class="card-2">Aqui você encontrará a lista dos mais vendidos pela SetupGamer.</p>
+                <h2 class="card-2">
+                  Quer saber quais os produtos que a galera mais compra?
+                </h2>
+                <p class="card-2">
+                  Aqui você encontrará a lista dos mais vendidos pela
+                  SetupGamer.
+                </p>
               </div>
             </div>
             <div class="face face2">
               <h2>Mais comprados</h2>
             </div>
           </div>
-
         </div>
         <div class="container2">
-
           <div class="card">
             <div class="face face1">
               <div class="content">
                 <span class="stars"></span>
-                <h2 class="card-3">Quer deixar seu Setup ainda mais elegante e profissional?</h2>
-                <p class="card-3">Confira os acessórios que a SetupGamer tem para você.</p>
+                <h2 class="card-3">
+                  Quer deixar seu Setup ainda mais elegante e profissional?
+                </h2>
+                <p class="card-3">
+                  Confira os acessórios que a SetupGamer tem para você.
+                </p>
               </div>
             </div>
             <div class="face face2">
@@ -108,7 +123,9 @@
             <div class="face face1">
               <div class="content">
                 <span class="stars"></span>
-                <h2 class="card-4">Querendo encontrar alguma máquina mais em conta?</h2>
+                <h2 class="card-4">
+                  Querendo encontrar alguma máquina mais em conta?
+                </h2>
                 <p class="card-4">Conheça nossos Pc´s mais baratos.</p>
               </div>
             </div>
@@ -116,7 +133,6 @@
               <h2>Economicos</h2>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -124,41 +140,51 @@
       <section class="carrossel-filmes">
         <div class="owl-carousel owl-theme">
           <div class="item">
-            <img src="/img/produtos/gabinete1.jpg" alt="">
+            <img src="/img/produtos/gabinete1.jpg" alt="" />
             <h3>Nome do kit</h3>
             <button>Ver detalhes</button>
           </div>
           <div class="item">
-            <img src="/img/produtos/gabinete2.jpg" alt="">
+            <img src="/img/produtos/gabinete2.jpg" alt="" />
             <h3>Nome do kit</h3>
             <button>Ver detalhes</button>
           </div>
           <div class="item">
-            <img src="/img/produtos/gabinete3.jpg" alt="">
+            <img src="/img/produtos/gabinete3.jpg" alt="" />
             <h3>Nome do kit</h3>
             <button>Ver detalhes</button>
           </div>
           <div class="item">
-            <img src="/img/produtos/gabinete4.jpg" alt="">
+            <img src="/img/produtos/gabinete4.jpg" alt="" />
             <h3>Nome do kit</h3>
             <button>Ver detalhes</button>
           </div>
           <div class="item">
-            <img src="/img/produtos/gabinete5.jpg" alt="">
+            <img src="/img/produtos/gabinete5.jpg" alt="" />
             <h3>Nome do kit</h3>
             <button>Ver detalhes</button>
           </div>
-          
-      </div>
+        </div>
       </section>
 
       <!--Cupom-->
       <section class="cupom">
-        <button>CUPOM</button>
+        <button><img src="https://i.postimg.cc/KzQFzHFx/banner-desconto.jpg" alt="Desconto"></button>
+      </section>
+
+      <!---Video-->
+      <section class="container1">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/RNQvBeh1G2o"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </section>
     </main>
-    <footer>
-        <%- include("./includes/footer") %> 
-    </footer>
-</body>
+    <footer><%- include("./includes/footer") %></footer>
+  </body>
 </html>
