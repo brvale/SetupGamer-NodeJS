@@ -5,4 +5,8 @@ router.get("/", function(req, res, next) {
     res.render("index")
 });
 
+router.get("/monteSeuPc", function(req, res, next) {
+    res.render("monteSeuPc")
+});
+
 module.exports = router;
