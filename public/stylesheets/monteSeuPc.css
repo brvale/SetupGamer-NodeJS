@@ -14,7 +14,7 @@ h1 {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 130px 205px 0 205px;
+    border-width: 11vh 10.5vw 0 10.5vw;
     border-color: #35c910 transparent transparent transparent;
 }
 
@@ -74,13 +74,13 @@ h2 {
   
 .cta {
     display: flex;
-    padding: 10px 45px;
+    padding: 1vh 2.3vw;
     text-decoration: none;
     font-size: 40px;
     color: white;
     background: #242424;
     transition: 1s;
-    box-shadow: 6px 6px 0 rgb(20, 20, 20);
+    box-shadow: 1vh 1vh 0 rgb(20, 20, 20);
     transform: skewX(-15deg);
 }
   
@@ -90,7 +90,7 @@ h2 {
   
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 #35c910;
+    box-shadow: 1.5vh 1.5vh 0 #35c910;
 }
   
 .cta span:nth-child(2) {
@@ -151,5 +151,11 @@ path.two {
     }
     100% {
         fill: white;
+    }
+}
+
+@media (max-width: 334px) {
+    h1 {
+        font-weight: normal;
     }
 }
