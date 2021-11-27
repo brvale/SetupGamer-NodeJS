@@ -8,7 +8,11 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
-    font-family: 'Cambay', sans-serif;
+    font-family: "Oswald", sans-serif;
+}
+
+h1, h2 {
+    font-style: italic;
 }
 
 /*********** Header ***********/
