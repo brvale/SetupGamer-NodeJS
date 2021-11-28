@@ -1,25 +1,25 @@
-/* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    width: 100%;
-}*/
 
 :root {
     --white: #fff;
     --black: #111;
-    --black2: #999;
+    --black2: rgba(87, 87, 87, 0.719);
     --green: #35C910;
+    --gray: #CACACA;
+    --gray2: #c4c4c4;
 }
 
-.containerl {
+/*.containerl {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
+}*/
+
+form {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formulario {
@@ -27,38 +27,103 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--black2);
-    width: 75%;
+    width: 70%;
+    margin-left: 15%;
+    padding-bottom: 5%;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     padding-top: 3%;
+    color: var(--white);
 }
+
+.triangle-down {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11vh 13vw 0 13vw;
+    /*border-width: 130px 205px 0 205px;*/
+    border-color: #35c910 transparent transparent transparent;
+    opacity: 50%;
+}
+
 
 .opcao {
     display: flex;
+    justify-content: center;
 }
 
 .opcao button {
-    width: 492px;
-    max-width: 492px;
+    display: flex;
+    justify-content: center;
+    width: 35%;
     color: var(--white);
     background-color: var(--black);
 }
 
 h2 {
+    position: absolute;
     display: flex;
     justify-content: center;
+    padding-bottom: 5%;
+    color: var(--white);
+    font-size: 70%;
+    padding-top: 1%;
 }
-/*
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
 
 button {
     border: none;
+    border-bottom: 1px solid var(--green)
+}
+
+input {
+    background-color: var(--black2);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: var(--white);
+    border-bottom: 1px solid var(--gray);
+    margin: 25px;
+    background: none;
+    max-width: 30vw;
+}
+
+input#email {
+    width: 30vw;
+}
+
+input#senha {
+    width: 30vw;
+}
+
+.termos {
+    display: flex;
+    position: relative;
+}
+
+.termos p {
+    padding-top: 1vh;
+    padding-left: 8%;
+    position: absolute;
+}
+
+strong {
+    color: var(--green);
+}
+
+.formulario form .politica {
+    width: 55%;
+    padding-left: 5%;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    section, aside {
+        width: 100%;
+    }
 }

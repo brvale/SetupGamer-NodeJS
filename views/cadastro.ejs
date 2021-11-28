@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="/stylesheets/logo.css" />
     <link rel="stylesheet" href="/stylesheets/index.css" />
     <link rel="stylesheet" href="/stylesheets/cadastro.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
 
@@ -21,15 +25,16 @@
     
     <section class="containerl">
 
-        <div class="formulario">
-        
             <div class="opcao">
 
-                <button>Pessoa Fisica</button>
-                <button>Pessoa Juridica</button>
+                <button><p>Pessoa Fisica</p></button>
+                <button><p>Pessoa Juridica</p></button>
 
             </div>
 
+        <div class="formulario">
+                    
+                <div class="triangle-down"></div>
                 <h2>Insira seus dados</h2>
 
             <form action="">
@@ -45,7 +50,7 @@
                 </div>
 
                     <label for="email"></label>
-                    <input type="text" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
 
                 <div class="caixa2">
 
@@ -68,10 +73,23 @@
                 </div>
 
                     <label for="senha"></label>
-                    <input type="text" id="senha" name="senha" placeholder="Senha">
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+
+                <div class="termos">
+
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <p>Receber novidades e promoções por e-mail</p>
+
+                </div>
+
+                <p class="politica">Ao criar uma conta, você está de acordo com nossa <strong>política de privacidade.</strong></p>
+
+                <button class="cadastrar"><p>Cadastrar</p></button>
 
             </form>
         
+
+            
         </div>
         
 
