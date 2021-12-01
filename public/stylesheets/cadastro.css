@@ -17,6 +17,7 @@
 
 form {
     margin-top: 2em;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,63 +64,107 @@ h1 {
     justify-content: center;
     width: 35%;
     color: var(--white);
-    background-color: var(--black);
+    background: none;
+    cursor: pointer;
+    border: none;
 }
 
-h2 {
+.opcao p {
+    font-size: 2vh;
+}
+
+main h2 {
     position: absolute;
     display: flex;
     justify-content: center;
     padding-bottom: 5%;
     color: var(--white);
-    font-size: 70%;
+    font-size: 1.8vh;
     padding-top: 1%;
 }
 
-button {
+main button:focus {
     border: none;
-    border-bottom: 1px solid var(--green)
+    border-bottom: 2px solid var(--green)
 }
 
-input {
+.caixa {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.caixa input:nth-of-type(1) {
+    margin-right: 30%;
+}
+
+main input {
     background-color: var(--black2);
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     color: var(--white);
     border-bottom: 1px solid var(--gray);
-    margin: 25px;
+    margin: 25px 0;
     background: none;
-    max-width: 30vw;
+    width: 12vw;
 }
 
-input#email {
-    width: 30vw;
+main input#email {
+    width: 100%;
 }
 
-input#senha {
-    width: 30vw;
+main input#senha {
+    width: 100%;
+}
+
+main input:focus {
+    outline: 0;
+}
+
+main input::placeholder {
+    font-size: 1.7vh;
+}
+
+.termos label {
+    font-size: 1.7vh;
 }
 
 .termos {
     display: flex;
-    position: relative;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
 }
 
-.termos p {
-    padding-top: 1vh;
-    padding-left: 8%;
-    position: absolute;
+.termos input {
+    margin: 0 3px 0 0;
+    padding: 0;
+    width: 1vw;
 }
 
-strong {
+main strong {
     color: var(--green);
 }
 
 .formulario form .politica {
-    width: 55%;
-    padding-left: 5%;
+    width: 100%;
     text-align: left;
+    font-size: 1.7vh;
+}
+
+button.cadastrar {
+    margin-top: 2vh;
+    padding: 2vh 1.5vw;
+    font-size: 1.6vh;
+    border-radius: 11px;
+    background-color: var(--green);
+    border: none;
+    cursor: pointer;
+}
+
+button.cadastrar:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
 }
 
 @media screen and (max-width: 768px) {

@@ -36,8 +36,10 @@ nav {
 .signup{
     background-color: #35c910;
     margin-right: 5px;
+    padding: 2px 0.5vw;
     color: black;
     font-size: 1.6vh;
+    text-decoration: none;
     border: solid #35c910;
     border-radius: 11px;
     border-width: thin;
