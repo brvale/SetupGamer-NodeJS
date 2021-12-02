@@ -3,8 +3,8 @@
     overflow: hidden;
     position: relative;
     margin-bottom: 5vh;
-  }
-  
+}
+
 .carousel .carousel__item,
 .carousel .carousel__item--hidden {
     display: none;

@@ -12,5 +12,8 @@ router.get('/cadastro', function(req, res, next) {
 router.get("/monteSeuPc", function(req, res, next) {
     res.render("monteSeuPc", { title: "Monte seu PC" })
 });
+router.get("/lancamento", function(req, res, next) {
+    res.render("lancamento")
+});
 
 module.exports = router;
