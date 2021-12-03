@@ -1,8 +1,6 @@
-.section{
-    box-sizing: border-box;
-}
 .owl-Carousel{
     border-top: 100vh;
+    box-shadow: 0px 4px 4px rgba(214, 208, 208, 0.25);
 }
 .carousel{
     margin-bottom: 4rem;
@@ -36,20 +34,24 @@
 
  /* ----Video----- */
 
+ .video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+ }
 
 .video .container{
-    background-color: brown;
+    background: #777;
     margin: 50px -20px 50px  -20px;
     padding: 20px;
-    padding-bottom: 50%;
-    position: relative;
+    position: relative; 
 }
-.video .container > iframe{
+.video .container iframe{
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 50%;
-    height: 50vh;
+    justify-content: center;  
+    align-items: center;
+    align-content: center;
+    position: relative; 
+    box-shadow: 0px 4px 4px  rgba(214, 208, 208, 0.25);   
 }

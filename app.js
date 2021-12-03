@@ -1,12 +1,10 @@
 const express = require('express');
 const path = require('path');
 
-<<<<<<< HEAD
+
 var indexRouter = require('./routes/index');
 var lancamentoRouter = require('./routes/index')
-=======
-const indexRouter = require('./routes/index');
->>>>>>> ce44e4a42842c5ebf740c00df3fc65d5f557595c
+
 
 const app = express();
 
