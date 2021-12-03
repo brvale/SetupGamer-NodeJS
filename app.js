@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 
-
 var indexRouter = require('./routes/index');
 var lancamentoRouter = require('./routes/index')
 
