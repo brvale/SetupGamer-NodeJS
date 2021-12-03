@@ -1,6 +1,8 @@
+/* ----Carousel---- */
+
 .owl-Carousel{
     border-top: 100vh;
-    box-shadow: 0px 4px 4px 4px rgba(5, 5, 5, 0.25);
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.719);
 }
 .carousel{
     margin-bottom: 4rem;
@@ -34,6 +36,7 @@
 
  /* ----Video----- */
 
+
  section.video {
     color: white;
     margin: 40vh;
@@ -44,5 +47,24 @@
     align-items: center;
 }
 .meio iframe{
-    box-shadow: 0px 4px 4px 4px rgba(5, 5, 5, 0.25);
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.719);
+}
+
+
+/* ----Gabinetes---- */
+
+
+.gabinetes .container div {
+    display: flex;
+    justify-content: space-around;
+    color: lavender;
+}
+.gabinetes .container div img{
+    width: 40vw;
+    height: 40vh;
+}
+.gabinetes .container .description{
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
