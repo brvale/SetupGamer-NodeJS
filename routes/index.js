@@ -7,13 +7,18 @@ router.get("/", function(req, res, next) {
 
 router.get('/cadastro', function(req, res, next) {
     res.render("cadastro", { title: "Cadastro" })
-})
+});
 
 router.get("/monteSeuPc", function(req, res, next) {
     res.render("monteSeuPc", { title: "Monte seu PC" })
 });
+
 router.get("/lancamento", function(req, res, next) {
     res.render("lancamento")
+});
+
+router.get("/produto", function(req, res, next) {
+    res.render("produto", { title: "Nome do produto" })
 });
 
 module.exports = router;
