@@ -14,11 +14,15 @@ router.get("/monteSeuPc", function(req, res, next) {
 });
 
 router.get("/lancamento", function(req, res, next) {
-    res.render("lancamento")
+    res.render("lancamento", { title: "Nome da categoria" })
 });
 
 router.get("/produto", function(req, res, next) {
     res.render("produto", { title: "Nome do produto" })
+});
+
+router.get("/contato", function(req, res, next) {
+    res.render("contato", { title: "Fale conosco" })
 });
 
 module.exports = router;

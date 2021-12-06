@@ -254,6 +254,7 @@ footer div.container1 {
 .receber-emails input {
     height: 4vh;
     width: 10vw;
+    min-width: 77px;
     font-size: 2vh;
     border: none;
     border-radius: 4px;
@@ -262,6 +263,7 @@ footer div.container1 {
 .footer-enviar{
     height: 4vh;
     width: 4vw;
+    min-width: 29px;
     background-color: #35C910;
     border: none;
     border-radius: 4px;
@@ -304,6 +306,11 @@ footer div.footer-info li{
 footer h3 {
     margin-top: 0;
     margin-bottom: 4vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
 /*********** media ***********/
