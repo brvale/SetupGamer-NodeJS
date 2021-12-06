@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/contato.css" />
+
+    <!--JS-->
+    <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+
+    <title><%- title %> </title>
+</head>
+<body>
+    <header><%- include('./includes/header') %> </header>
+    <main>
+        <h1>ATENDIMENTO</h1>
+
+        <section class="formulario">
+            <div class="triangle-down"></div>
+                <h2 class="top">Envie sua dúvida ou feedback</h2>
+
+                <form action="">
+                    <label for="nome"></label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome">
+
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" placeholder="E-mail">
+
+                    <div class="caixa">
+                        <label for="telefone"></label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+
+                        <label for="cidade"></label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+
+                        <label for="estado"></label>
+                        <input type="text" id="estado" name="estado" placeholder="Estado">
+                    </div>
+
+                    <label for="mensagem"></label>
+                    <input type="text" id="mensagem" name="mensagem" placeholder="Mensagem">
+
+                    <button>Enviar</button>
+                </form>
+
+                <div class="triangle-top"></div>
+                <h2 class="bottom">Te enviaremos um email</h2>
+        </section>
+    </main>
+    <footer><%- include('./includes/footer') %> </footer>
+</body>
+</html>
