@@ -249,13 +249,6 @@ section.midias-sociais {
 
 section.midias-sociais a {
     background-color: white;
-    margin: 0 20.7%;
-    padding: 3vh;
-    border: none;
-    font-size: 2vh;
-    width: 58.5%;
-    cursor: pointer;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
     padding: 7vh 7vw;
     box-shadow: 0px 0px 10px 0px black;
 }
