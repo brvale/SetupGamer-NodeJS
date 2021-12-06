@@ -1,0 +1,163 @@
+.produto {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+}
+
+.produto img {
+    height: 40vh;
+    width: 20vw;
+    min-width: 170px;
+    border: solid 2px #4e4e4eaf;
+}
+
+.info-produto {
+    margin-left: 1vw;
+    color: white;
+}
+
+.info-produto h2{
+    margin-top: 0;
+    font-size: 2.5vh;
+}
+
+.info-produto p {
+    font-size: 2vh;
+}
+
+.info-produto i {
+    color: #35c910;
+    font-size: 3vh;
+}
+
+.info-produto button.comprar {
+    margin-bottom: 2vh;
+    padding: 1vh 9.3vw;
+    background-color: #35c910;
+    border: none;
+    border-radius: 4px;
+    font-size: 2vh;
+}
+
+.info-produto button.comprar:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
+    cursor: pointer;
+}
+
+.container-cep {
+    display: flex;
+    align-items: center;
+    font-size: 1.5vh;
+}
+
+.container-cep p {
+    margin-right: 1vw;
+    color: rgb(87, 87, 87);
+}
+
+.container-cep input {
+    margin-right: 1vw;
+    padding: 1vh;
+    border: none;
+    border-radius: 4px;
+}
+
+.container-cep button {
+    padding: 1vh 1vw;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    cursor: pointer;
+}
+
+.container-cep button:hover {
+    background-color: rgb(68, 68, 68);
+}
+
+.descricao-montagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.options button{
+    margin: 0;
+    padding: 1vh 10vw;
+    color: white;
+    font-size: 2vh;
+    background: none;
+    cursor: pointer;
+    border: none;
+    border-bottom: solid 2px #4e4e4eaf;
+}
+
+.options button:focus {
+    border-bottom: solid 2px#35c910;
+}
+
+.title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    color: white;
+}
+
+.title-content h2 {
+    margin: 0;
+}
+
+.title-content p {
+    margin: 0;
+    color: rgb(87, 87, 87);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30vw;
+}
+
+article h3 {
+    color: white;
+    font-size: 2vh;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background-color: rgb(87, 87, 87);
+    margin-bottom: 1vh;
+    max-height: 4rem;
+}
+
+.item img {
+    height: 4rem;
+    margin-right: 1vw;
+}
+
+
+
+
+@media (max-width: 540px) {
+    .container-cep {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 364px) {
+    .container-cep input {
+        width: 30vw;
+    }
+}

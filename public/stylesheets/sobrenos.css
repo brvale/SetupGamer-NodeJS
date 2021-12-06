@@ -1,0 +1,173 @@
+:root {
+    --white: #fff;
+    --black: #111;
+    --black2: rgba(87, 87, 87, 0.719);
+    --green: #35C910;
+    --gray: #CACACA;
+    --gray2: #c4c4c4;
+}
+
+/*.containerl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}*/
+
+form {
+    margin-top: 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--);
+    width: 70%;
+    margin-left: 15%;
+    padding-bottom: 5%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    color: var(--white);
+}
+
+.triangle-down {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11vh 13vw 0 13vw;
+    /*border-width: 130px 205px 0 205px;*/
+    border-color: #35c910 transparent transparent transparent;
+    opacity: 50%;
+}
+
+
+.opcao {
+    display: flex;
+    justify-content: center;
+}
+
+.opcao button {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    color: var(--white);
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.opcao p {
+    font-size: 2vh;
+}
+
+main h2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+    color: var(--white);
+    font-size: 1.8vh;
+    padding-top: 1%;
+}
+
+main button:focus {
+    border: none;
+    border-bottom: 2px solid var(--green)
+}
+
+.caixa {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.caixa input:nth-of-type(1) {
+    margin-right: 30%;
+}
+
+main input {
+    background-color: var(--black2);
+    border: none;
+    color: var(--white);
+    border-bottom: 1px solid var(--gray);
+    margin: 25px 0;
+    background: none;
+    width: 12vw;
+}
+
+main input#email {
+    width: 100%;
+}
+
+main input#senha {
+    width: 100%;
+}
+
+main input:focus {
+    outline: 0;
+}
+
+main input::placeholder {
+    font-size: 1.7vh;
+}
+
+.termos label {
+    font-size: 1.7vh;
+}
+
+.termos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.termos input {
+    margin: 0 3px 0 0;
+    padding: 0;
+    width: 1vw;
+}
+
+main strong {
+    color: var(--green);
+}
+
+.formulario form .politica {
+    width: 100%;
+    text-align: left;
+    font-size: 1.7vh;
+}
+
+button.cadastrar {
+    margin-top: 2vh;
+    padding: 2vh 1.5vw;
+    font-size: 1.6vh;
+    border-radius: 11px;
+    background-color: var(--green);
+    border: none;
+    cursor: pointer;
+}
+
+button.cadastrar:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
+}
+
+@media screen and (max-width: 768px) {
+    section, aside {
+        width: 100%;
+    }
+}

@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 
-const indexRouter = require('./routes/index');
+var indexRouter = require('./routes/index');
+var lancamentoRouter = require('./routes/index')
+
 
 const app = express();
 
@@ -11,5 +13,6 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/lancamento', lancamentoRouter);
 
 module.exports = app;

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/produto.css" />
+
+    <!--JS-->
+    <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+
+    <title> <%- title %>  </title>
+</head>
+<body>
+    <header><%- include('./includes/header') %> </header>
+    <main>
+        <section class="produto">
+            <img src="/img/produtos/gabinete4.jpg" alt="">
+
+            <div class="info-produto">
+                <h2>PC Gamer - Intel Core i7/ HD 1TB/ DDR4 8GB</h2>
+                <p><i class="fas fa-barcode"></i> R$ 2.431,61 <small>no boleto</small></p>
+                <p><i class="fas fa-credit-card"></i> R$ 2.801,13 <small>em até 12x no cartão</small></p>
+
+                <button class="comprar">Comprar</button>
+
+                <div class="container-cep">
+                    <p>Frete e Prazo</p>
+                    <input type="text" placeholder="Insira seu CEP">
+                    <button>Calcular</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="descricao-montagem">
+            <div class="options">
+                <button>Descrição</button>
+                <button>Componentes</button>
+            </div>
+
+            <div class="title-content">
+                <h2>Montagem</h2>
+                <p>Adicione ou troque os items conforme seu gosto</p>
+            </div>
+
+            <article class="content">
+                <h3>CPU Cooler</h3>
+
+                <div class="item">
+                    <input type="radio" name="radio">
+                    <img src="" alt="">
+                    <p>Nenhum componente</p>
+                </div>
+
+                <div class="item">
+                    <input type="radio" name="radio">
+                    <img src="/img/cpu-cooler/cpu-cooler1.jpg" alt="">
+                    <p>Cooler cpu Quiet</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer><%- include('./includes/footer') %> </footer>
+</body>
+</html>
