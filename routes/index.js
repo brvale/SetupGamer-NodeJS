@@ -20,8 +20,9 @@ router.get("/lancamento", function(req, res, next) {
 router.get("/produto", function(req, res, next) {
     res.render("produto", { title: "Nome do produto" })
 });
-router.get("/sobrenos", function(req, res, next) {
-    res.render("Sobrenos", { title: "A SetupGamer" })
+
+router.get("/sobreNos", function(req, res, next) {
+    res.render("sobreNos", { title: "A SetupGamer" })
 });
 
 router.get("/contato", function(req, res, next) {
