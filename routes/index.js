@@ -20,5 +20,8 @@ router.get("/lancamento", function(req, res, next) {
 router.get("/produto", function(req, res, next) {
     res.render("produto", { title: "Nome do produto" })
 });
+router.get("/sobrenos", function(req, res, next) {
+    res.render("Sobrenos", { title: "A SetupGamer" })
+});
 
 module.exports = router;
