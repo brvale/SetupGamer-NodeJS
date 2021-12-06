@@ -1,14 +1,18 @@
 body {
     background-image: linear-gradient(
         180deg,
-        #242424 60%,
-        black 90%,
+        #242424 75%,
+        black 95%,
         #35C910 100%
     );
     padding: 0;
     margin: 0;
     width: 100%;
-    font-family: 'Cambay', sans-serif;
+    font-family: "Oswald", sans-serif;
+}
+
+h1, h2 {
+    font-style: italic;
 }
 
 /*********** Header ***********/
@@ -32,8 +36,10 @@ nav {
 .signup{
     background-color: #35c910;
     margin-right: 5px;
+    padding: 2px 0.5vw;
     color: black;
     font-size: 1.6vh;
+    text-decoration: none;
     border: solid #35c910;
     border-radius: 11px;
     border-width: thin;
@@ -91,7 +97,6 @@ div.menu-bar ul li a {
 div.menu-bar ul li a:hover {
     box-shadow: 0 0 10px rgb(0, 0, 0), inset 0 0 1px rgba(0, 0, 0, 0.877);
     background: rgba(34, 34, 34, 0.993);
-    height: 100%;
     color: #35C910
 }
 

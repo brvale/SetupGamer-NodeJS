@@ -1,6 +1,10 @@
+.logo {
+  text-decoration: none;
+  position: relative;
+  margin-left: 10%;
+}
+
 .deconstructed {
-    position: relative;
-    margin-left: 11%;
     color: transparent;
     font-family: 'Cambay', sans-serif;
     font-style: italic;
@@ -9,7 +13,7 @@
     letter-spacing: -0.02em;
     line-height: 1.03em;
   }
-  
+
 .deconstructed > div {
     position: absolute;
     top: 0;
