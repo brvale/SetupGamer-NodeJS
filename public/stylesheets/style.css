@@ -78,7 +78,7 @@ header nav img {
     cursor: pointer;
 }
 
-/*********** Modal ***********/
+/*********** Login ***********/
 .modal {
     position: fixed;
     width: 100%;
@@ -189,6 +189,7 @@ header nav img {
     margin-top: 1vh;
     color: white;
     text-decoration: none;
+    font-size: 1.5vh;
 }
 
 /*********** Menu Bar ***********/  
@@ -258,6 +259,10 @@ footer div.container1 {
     font-size: 2vh;
     border: none;
     border-radius: 4px;
+}
+
+.receber-emails input:focus {
+    outline: none;
 }
 
 .footer-enviar{
