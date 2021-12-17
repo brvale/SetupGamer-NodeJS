@@ -12,7 +12,7 @@
 
 .carousel .carousel__item img {
     width: 100%;
-    height: 57vh;
+    height: 86vh;
 }
 
 .carousel .carousel__item--visible {
@@ -43,11 +43,11 @@
 }
 
 .carousel .carousel__actions button[data-js="carousel__button--prev"] {
-    margin-left: 100px;
+    margin-left: 8vw;
 }
 
 .carousel .carousel__actions button[data-js="carousel__button--next"] {
-    margin-right: 100px;
+    margin-right: 8vw;
 }
 
 @keyframes fadeVisibility {
@@ -277,6 +277,10 @@ section.midias-sociais a:hover {
 @media (max-width: 564px) {
     .video iframe {
         width: 20rem;
+    }
+
+    .carousel .carousel__item img {
+        height: 50vh;
     }
 }
 
