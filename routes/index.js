@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const institucionalRouter = require('./institucional');
+
 router.get("/", function(req, res, next) {
     res.render("index", { title: "SetupGamer" })
 });
@@ -28,5 +30,7 @@ router.get("/sobreNos", function(req, res, next) {
 router.get("/contato", function(req, res, next) {
     res.render("contato", { title: "Fale conosco" })
 });
+
+router.use("/institucional", institucionalRouter);
 
 module.exports = router;
