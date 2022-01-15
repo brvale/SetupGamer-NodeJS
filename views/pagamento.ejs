@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/pagamento.css" />
+
+    <!--JS-->
+    <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts/accordion.js"></script>
+    
+    <title><%=title%></title>
+</head>
+<body>
+    <header><%- include("./includes/header") %></header>
+    <main>
+        <h1>FORMA DE PAGAMENTO</h1>
+
+        <section class="options">
+
+            <div class="accordion">
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    <i class="fas fa-barcode"></i>Boleto bancário <small class="valorAcc">(R$ 2.316,15)</small>
+                </label>
+            </div>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        
+                    </p>
+                </div>
+
+            <div class="accordion">
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    <i class="fas fa-credit-card"></i>Cartão de crédito <small class="valorAcc">(R$ 2.656,65)</small>
+                </label>   
+            </div>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        
+                    </p>
+                </div>
+
+            <div class="accordion">
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    <img src="/img/mercado-pago.png" alt="Mercado Pago">Mercado Pago
+                </label>   
+            </div>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        
+                    </p>
+                </div>
+
+            <div class="accordion">
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    <i class="fab fa-paypal"></i>PayPal
+                </label>   
+            </div>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        
+                    </p>
+                </div>
+
+            <div class="container">
+                <p>Produto <small class="valor1">R$ 2.583,17</small></p>
+                <p>Frete <small class="valor2">R$ 69,29</small></p>
+            </div>
+
+        </section>
+
+    </main>
+    <footer><%- include("./includes/footer") %></footer>
+</body>
+</html>

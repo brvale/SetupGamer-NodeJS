@@ -64,6 +64,8 @@
 .search {
     display: flex;
     margin-left: 28.5%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     width: 40vw;
     border-bottom: 1px solid #35c910;
 }
