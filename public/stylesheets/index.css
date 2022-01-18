@@ -75,7 +75,7 @@
     width: 96%;
     border: none;
     color: white;
-    font-size: 1.5vh;
+    font-size: 1.8vh;
 }
 
 .search input:focus {
@@ -97,6 +97,15 @@
 }
 
 /*********** Categorias ***********/
+.categories {
+    margin-bottom: 15vh;
+}
+
+.categories h2 {
+    color: #fff;
+    font-size: 1.7em;
+}
+
 .categories h2, p {
     text-align: center;
 }
@@ -197,8 +206,14 @@
 }
 
 /*********** Carrossel de produtos ***********/
+.carrossel-filmes h2 {
+    color: #fff;
+    font-size: 1.7em;
+    text-align: center;
+}
+
 .carrossel-filmes {
-    margin: 7vh 20.7%;
+    margin: 13vh 20.7%;
 }
 
 .carrossel-filmes .item {
@@ -226,13 +241,17 @@
 }
 
 /*********** Video ***********/
+.video h2 {
+    color: white;
+    font-size: 1.7em;
+}
+
 section.video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
 
-    margin-bottom: 7vh;
+    margin-bottom: 15vh;
 }
 
 .video iframe {
@@ -241,12 +260,16 @@ section.video {
 }
 
 /*********** Midias sociais ***********/
+.midias-sociais h2 {
+    color: white;
+    font-size: 1.7em;
+}
+
 section.midias-sociais {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 15vh;
-    color: white;
 }
 
 section.midias-sociais a {
