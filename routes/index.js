@@ -32,6 +32,10 @@ router.get("/contato", function(req, res, next) {
     res.render("contato", { title: "Fale conosco | SetupGamer" })
 });
 
+router.get("/carrinhoDeCompra", (req, res, next) => {
+    res.render("carrinhoDeCompra", { title: "Carrinho de Compra | SetupGamer"})
+})
+
 router.use("/institucional", institucionalRouter);
 router.use("/checkout", checkoutRouter);
 
