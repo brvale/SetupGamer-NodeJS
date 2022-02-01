@@ -104,8 +104,73 @@ input[type="radio"]:checked::before {
     width: 60%;
     margin: 0 20%;
     display: none;
-    background-color: white;
+    background-color: var(--black2);
+    border-bottom: 1px solid #fff;
+    color: #fff;
     overflow: hidden;
+}
+
+#painel-boleto h2{
+    text-align: center;
+}
+
+#painel-boleto p:nth-child(1){
+    border-bottom: 1px solid #fff;
+}
+
+.card-content {
+    margin: 2.5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#painel-cartao {
+    display: flex;
+    justify-content: center;
+}
+
+#painel-cartao form {
+    width: 35%;
+}
+
+#painel-cartao label {
+    font-size: 1.2em;
+}
+
+#painel-cartao input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.card-content input {
+    width: 100%;
+}
+
+#painel-cartao input::placeholder {
+    text-align: center;
+}
+
+#painel-cartao input:focus {
+    outline: none;
+}
+
+.card-container {
+    display:  flex;
+    margin: 2.5em 0;
+    width: 100%;
+}
+
+.card-container input {
+    width: 4vw;
+}
+
+.card-container label:nth-of-type(1) {
+    margin-right: 4.3vw;
 }
 
 small.valor1 {
