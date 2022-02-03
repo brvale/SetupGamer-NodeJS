@@ -125,13 +125,9 @@ input[type="radio"]:checked::before {
     align-items: center;
 }
 
-#painel-cartao {
-    display: flex;
-    justify-content: center;
-}
-
 #painel-cartao form {
     width: 35%;
+    margin-left: 33%;
 }
 
 #painel-cartao label {
