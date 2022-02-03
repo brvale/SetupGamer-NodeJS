@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --white: #fff;
+    --black: #111;
+    --black2: rgba(87, 87, 87, 0.719);
+    --black3: #20232d;
+    --green: #35C910;
+    --gray: #CACACA;
+    --gray2: #c4c4c4;
+    --orange: #e39305;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .separarElementos{
+    display: flex;
+    justify-content: space-between;
+}
+.produtoSelecionado {
+    width: 700px;
+    height: 800px;
+    background-color: var(--orange);
+}

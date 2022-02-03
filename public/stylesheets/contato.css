@@ -58,13 +58,13 @@ form {
     width: 100%;
 }
 
-main input {
-    background-color: rgba(87, 87, 87, 0.719);
+main input{
+    resize: none;
+    background: none;
     border: none;
     color: white;
     border-bottom: 1px solid #CACACA;
     margin: 25px 0;
-    background: none;
     width: 99%;
 }
 
@@ -80,8 +80,17 @@ main input {
     margin-right: 5vw;
 }
 
-main input:focus {
+main input:focus, textarea:focus {
     outline: none;
+}
+
+textarea {
+    resize: none;
+    background: none;
+    color: white;
+    border: 1px solid #CACACA;
+    margin: 25px 0;
+    width: 99%;
 }
 
 form button {
@@ -91,6 +100,7 @@ form button {
     border: none;
     font-size: 1.5vh;
     font-weight: 700;
+    cursor: pointer;
 }
 
 form button:hover{
