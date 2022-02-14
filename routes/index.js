@@ -16,8 +16,8 @@ router.get("/monte-seu-pc", function(req, res, next) {
     res.render("monteSeuPc", { title: "Monte seu PC | SetupGamer" })
 });
 
-router.get("/lancamento", function(req, res, next) {
-    res.render("lancamento", { title: "Nome da categoria" })
+router.get("/categorias", function(req, res, next) {
+    res.render("categorias", { title: "Categorias | SetupGamer" })
 });
 
 router.get("/produto", function(req, res, next) {
