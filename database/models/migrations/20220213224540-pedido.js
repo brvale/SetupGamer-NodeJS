@@ -11,7 +11,8 @@ module.exports = {
       },
       id_cliente: {
         type: Sequelize.INTEGER
-      }
+      },
+      
     })
   },
 

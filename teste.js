@@ -1,4 +1,4 @@
-const db = require('./models');
+const db = require('./database/models');
 
 
 //testa a conexão com o banco
