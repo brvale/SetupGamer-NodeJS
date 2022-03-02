@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/endereco.css" />
+
+    <!--JS-->
+    <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+   
+    <title><%- title %></title>
+</head>
+<body>
+    <header> <%- include("./includes/header") %> </header>
+    <main>
+        <h1>ENDEREÇO DE ENTREGA</h1>
+
+        <form action="">
+            <section class="form-cep">
+                <label for="cep">CEP</label>
+                <input name="cep" type="text" placeholder="00000-000">
+                <p>Não sabe seu CEP? <a href="">Clique aqui</a></p>
+            </section>
+
+            <section class="form-endereco">
+                <div>
+                    <label for="nomeDestinatario">Destinatário</label>
+                    <input name="nomeDestinatario" type="text" placeholder="Nome Completo">
+                </div>
+
+                <div>
+                    <label for="rua">Rua</label>
+                    <input name="rua" type="text" placeholder="Nome da rua">
+                </div>
+
+                <div>
+                    <label for="numero">Número</label>
+                    <input name="numero" type="text" placeholder="Número da residência">
+                </div>
+
+                <div>
+                    <label for="complemento">Complemento</label>
+                    <input name="complemento" type="text" placeholder="EX:. Nº Ap./ Ponto de referência">
+                </div>
+
+                <div>
+                    <label for="bairro">Bairro</label>
+                    <input name="bairro" type="text" placeholder="Nome do bairro">
+                </div>
+
+            </section>
+
+            <button>Salvar Endereço</button>
+        </form>
+    </main>
+    <footer> <%- include("./includes/footer") %> </footer>
+</body>
+</html>

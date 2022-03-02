@@ -14,6 +14,25 @@ body {
 h1, h2 {
     font-style: italic;
 }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #35C910;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #242424 60%,
+        #000 80%
+    );
+    border-radius: 10px;
+  }
 
 /*********** Header ***********/
 header {
