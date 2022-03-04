@@ -1,0 +1,128 @@
+:root {
+    --white: #fff;
+    --black: #111;
+    --black2: rgba(87, 87, 87, 0.719);
+    --green: #35C910;
+    --gray: #CACACA;
+    --gray2: #c4c4c4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 7vh 0;
+    margin-left: 24vw;
+}
+
+h1 {
+    width: 70%;
+    margin-bottom: 8vh;
+    border-bottom: 3px solid var(--green);
+    color: #fff;
+    text-align: center;
+}
+
+form {
+    width: 70%;
+    background-color: var(--black2);
+    color: #fff;
+}
+
+.form-control {
+    padding: 2rem 3rem;
+    font-family: system-ui, sans-serif;
+    font-size: 2vh;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.055em);
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+}
+  
+input[type="radio"]::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--green);
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+  
+.active {
+    background-color: var(--gray);
+    color: #000;
+}
+
+.form-control span {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    font-size: 1.1rem;
+}
+
+.form-control span small {
+    color: var(--gray2);
+}
+
+.form-control div {
+    width: 50%;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.form-frete {
+    border-bottom: 2px solid var(--black2);
+}
+
+.form-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.form-btn button {
+    margin: 4vh 0;
+    padding: 2vh 1.5vw;
+    background-color: var(--green);
+    border: none;
+    border-radius: 11px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.form-btn button:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
+}
+
+@media (max-width: 990px) {
+    main {
+        margin: 0 2em;
+    }
+
+    form, h1 {
+        width: 100%;
+    }
+}

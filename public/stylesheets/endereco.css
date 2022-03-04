@@ -12,11 +12,18 @@ main {
     flex-direction: column;
     align-items: center;
 
-    margin: 10vh 0;
+    margin: 7vh 0;
 }
 
 h1, form label {
     color: #fff;
+}
+
+h1 {
+    width: 50%;
+    margin-bottom: 8vh;
+    border-bottom: solid 2px var(--green);
+    text-align: center;
 }
 
 form {
@@ -27,7 +34,6 @@ form {
 
     width: 50%;
     padding: 5vh 0;
-    border-top: 3px solid var(--green);
     background-color: var(--black2);
 }
 
@@ -103,4 +109,14 @@ main button:hover {
     background-color: #1e7209d7;
     color: white;
     border-color: #1e7209d8;
+}
+
+@media (max-width: 740px) {
+    form {
+        width: 18em;
+    }
+
+    h1 {
+        width: 18rem;
+    }
 }

@@ -10,7 +10,7 @@ router.get('/endereco', function(req, res, next) {
 });
 
 router.get('/frete', function(req, res, next) {
-    res.render("frete", { title: "Forma de entrega" })
+    res.render("frete", { title: "Frete" })
 });
 
 router.get('/pagamento', function(req, res, next) {
