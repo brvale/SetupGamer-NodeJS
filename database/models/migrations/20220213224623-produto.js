@@ -2,10 +2,10 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    
+                                    //nome de modelo
     await queryInterface.createTable('produto', { 
-      id_produto: {
-        type: Sequelize.INTEGER,
+      id_produto: {//coluna
+        type: Sequelize.INTEGER,//valores
         allowNull: false,
         autoIncrement: true,
         primaryKey: true
@@ -53,7 +53,7 @@ module.exports = {
             model: "pecas", key: "nome"
           } 
       },
-      sdd: {
+      ssd: {
         type: Sequelize.STRING,
         allowNull: true,
           references: {
@@ -140,7 +140,12 @@ module.exports = {
 
 
       
-    });
+    },
+    {
+      tablename: 'produto',
+      timestamps: false
+    }
+    );
 
   },
 

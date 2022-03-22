@@ -6,6 +6,9 @@
     
         <link rel="stylesheet" href="/stylesheets/style.css" />
         <link rel="stylesheet" href="/stylesheets/logo.css" />
+        <link rel="stylesheet" href="/stylesheets/carrinhoDeCompra.css">
+        
+        <script defer src="/scripts/inputNumber.js" crossorigin="anonymous"></script>
     
         <!--<script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>-->
     
@@ -23,15 +26,65 @@
                 <section class="separarElementos">
 
                     <div class="produtoSelecionado">
-                        <ul>
-                            <li>
-                                <article></article> <!--colocar border-bottom que ele sempre separará quando usarmos o FOR-->
-                            </li>
+
+                     <ul>
+                            <li class="produto">
+                                
+                                <article>
+
+                                    <div class="img">
+
+                                        <img src="/img/produtos/gabinete4.jpg" alt="">
+                                        
+                                    </div>
+
+                                    
+                                    <div class="content">
+
+                                        <h2>example 1</h2>
+                                        <ul class="componentes">
+                                    
+                                            <li>item</li>
+                                            <li>item</li>
+                                            <li>item</li>
+                                            <li>item</li>
+                                            <li>item</li>
+                                        </ul>
+                                        
+
+                                    </div>
+
+                                <div class="close">
+
+                                    <button class="redirect">
+                                        x   
+                                    </button>
+
+                                </div>
+
+                                </article>
+
+                                <div class="a">
+
+                                    <input min=2 type="number" name="total" id="total" >
+                                    <button class='menos' onclick="menos()"> - </button>
+                                    <button class='mais' onclick="mais()"> + </button>
+                                    <p>valor</p> 
+                                    
+                                </div>
+                                
+
+                            </li>          
+               
                         </ul>
+                        
                     </div>
-
+<!----------------------------------------------------------------------------------------------------------------------->
                     <div class="finalizarCompra">
-
+                        <form action="" method="">
+                            <h2>SIMULE SEU FRETE E PRAZO</h2>
+                            <input type="text"><button>SIMULAR</button>
+                        </form>
                     </div>
 
                 </section>

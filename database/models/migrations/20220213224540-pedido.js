@@ -10,8 +10,23 @@ module.exports = {
         autoIncrement: true
       },
       id_cliente: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: "cliente", key: 'cliente'
+        }
       },
+      id_peca: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "peca", key: 'peca'
+        }
+      },
+      id_status: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "status", key: 'status'
+        }
+      }
       
     })
   },
