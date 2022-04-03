@@ -30,3 +30,6 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Cliente;
 };
+
+// cliente -> categoria -> produtos 1:N -> Pedidos foreignkey endereco, frete, listaProduto, listaPedido
+//sequelize model:generate --name tipo_midia --attributes nome:string, tipo_tag:
