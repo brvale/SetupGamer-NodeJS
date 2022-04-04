@@ -37,6 +37,16 @@
                 <div class="triangle-down"></div>
                 <h2>Insira seus dados</h2>
 
+                <% if(typeof(errors) != undefined ){ %>
+                    <p style="color: red">Ocorreu um erro</p>
+                    <ul>
+                        <% errors.forEach((error) =>{ %>
+                            <li> <%= error.msg %></li>
+                        <% }) %>
+                    </ul>
+                <% } %>
+
+
                 <form action="">
                     <div class="caixa">
                         <label for="nome"></label>
