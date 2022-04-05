@@ -29,7 +29,7 @@ const validarCampos = [
     check('senha')
         .notEmpty().withMessage("Deve preencher o campo senha").bail()
         .isString().withMessage("Deve preencher com letras e números")
-        .isLength({ min: 10, max: 20 }).withMessage("Esse campo deve possuir no minimo 10 caracteres")
+        .isLength({ min: 6, max: 10 }).withMessage("Esse campo deve possuir no minimo 10 caracteres")
 ]
 
 module.exports = validarCampos;
