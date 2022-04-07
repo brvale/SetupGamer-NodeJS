@@ -14,7 +14,15 @@ module.exports = {
       },
       nome: {
         allowNull: false,
-        type: Sequelize.STRING(100)
+        type: Sequelize.STRING(50)
+      },
+      sobrenome: {
+        allowNull: false,
+        type: Sequelize.STRING(50)
+      },
+      nomeEmpresa: {
+        allowNull: true,
+        type: Sequelize.STRING(50)
       },
       email: {
         allowNull: false,
