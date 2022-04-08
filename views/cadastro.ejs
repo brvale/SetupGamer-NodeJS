@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
-    <script defer src="/scripts/formulario.js"></script>
+    <script defer src="/scripts/formCadastro.js"></script>
     
     
     <title> <%- title %> </title>
@@ -29,8 +29,8 @@
 
                 <div class="opcao">
 
-                    <button><p>Pessoa Física</p></button>
-                    <button><p>Pessoa Jurídica</p></button>
+                    <button id="btnPF"><p>Pessoa Física</p></button>
+                    <button id="btnPJ"><p>Pessoa Jurídica</p></button>
 
                 </div>
 
@@ -39,8 +39,11 @@
                 <div class="triangle-down"></div>
                 <h2>Insira seus dados</h2>
 
-
-                <form class="form_pf" action="">
+                <form action="" method="POST">
+                    <div id="form-content--PF" class="form-content form-content--visible">
+                        <div class="caixa">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome">
                     
                     <div class="caixa">
                         <label for="nome"></label>
@@ -69,9 +72,33 @@
                         <input type="text" id="telefone" name="telefone" placeholder="Telefone">
                     </div>
 
-                        <label for="senha"></label>
-                        <input type="password" id="senha" name="senha" placeholder="Senha">
-
+                    <div id="form-content--PJ" class="form-content">
+                        <div class="caixa">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome">
+                    
+                            <label for="sobrenome"></label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                        </div>
+    
+                        <div class="caixa2">
+                            <label for="nomeEmpresa"></label>
+                            <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Nome da Empresa">
+    
+                            <label for="identificadorFiscal"></label>
+                            <input type="text" id="identificadorFiscal" name="identificadorFiscal" placeholder="CNPJ">
+    
+                            <label for="telefone"></label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+                        </div>
+                        
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+    
+                            <label for="senha"></label>
+                            <input type="password" id="senha" name="senha" placeholder="Senha">
+                    </div>
+                    
                     <div class="termos">
                         <input type="checkbox" id="checkbox" name="checkbox">
                         <label for="checkbox">Receber novidades e promoções por e-mail</label>
