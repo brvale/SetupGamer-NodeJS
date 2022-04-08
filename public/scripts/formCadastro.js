@@ -19,7 +19,4 @@ btnPJ.addEventListener('click', () => {
     } else {
         formPJ.classList.add('form-content--visible');
     }
-});
-
-
-
+});     

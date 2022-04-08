@@ -15,9 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
-    <script defer src="/scripts/formCadastro.js"></script>
-    
-    
+    <script defer src="/scripts/formCadastro.js" crossorigin="anonymous"></script>
+
     <title> <%- title %> </title>
 </head>
 <body>
@@ -45,31 +44,26 @@
                             <label for="nome"></label>
                             <input type="text" id="nome" name="nome" placeholder="Nome">
                     
-                    <div class="caixa">
-                        <label for="nome"></label>
-                        <input type="text" id="nome" name="nome" placeholder="Nome">
-                
-                        <label for="sobrenome"></label>
-                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
-                    </div>
+                            <label for="sobrenome"></label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                        </div>
 
+                        <div class="caixa2">
+                            <label for="dataDeNascimento"></label>
+                            <input type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento">
+
+                            <label for="identificadorFiscal"></label>
+                            <input type="text" id="identificadorFiscal" name="identificadorFiscal" placeholder="CPF">
+
+                            <label for="telefone"></label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+                        </div>
+                    
                         <label for="email"></label>
                         <input type="email" id="email" name="email" placeholder="Email" required>
 
-                    <div class="caixa">
-                        <label for="dataDeNascimento"></label>
-                        <input type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento">
-
-                        <label for="genero"></label>
-                        <input type="text" id="genero" name="genero" placeholder="Gênero">                        
-                    </div>   
-                
-                    <div class="caixa">
-                        <label for="cpf"></label>
-                        <input type="text" id="cpf" name="cpf" placeholder="CPF">
-
-                        <label for="telefone"></label>
-                        <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+                        <label for="senha"></label>
+                        <input type="password" id="senha" name="senha" placeholder="Senha">
                     </div>
 
                     <div id="form-content--PJ" class="form-content">
@@ -104,7 +98,7 @@
                         <label for="checkbox">Receber novidades e promoções por e-mail</label>
                     </div>
 
-                    <p class="politica">Ao criar uma conta, você está de acordo com nossa <strong>política de privacidade.</strong></p>
+                    <p class="politica">Ao criar uma conta, você está de acordo com nossa <strong><a href="./institucional/politica-privacidade">política de privacidade.</a></strong></p>
                     <button class="cadastrar">Cadastrar</button>
 
                 </form>
@@ -115,6 +109,4 @@
 
     <footer><%- include("./includes/footer") %></footer>
 </body>
-
-
 </html>
