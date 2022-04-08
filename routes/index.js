@@ -14,7 +14,7 @@ router.get('/cadastro', function(req, res, next) {
     res.render("cadastro", { title: "Cadastro | SetupGamer" })
 });
 
-router.post('/cadastro', cadastroController.register);
+//router.post('/cadastro', cadastroController.register);
 
 router.get("/monte-seu-pc", function(req, res, next) {
     res.render("monteSeuPc", { title: "Monte seu PC | SetupGamer" })

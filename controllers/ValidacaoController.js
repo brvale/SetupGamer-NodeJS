@@ -20,7 +20,7 @@ module.exports = {
 
             return Cliente.push(dadosUsuario);
         }else{
-            res.render("cadastro", { errors: listaDeErro.map(), old: req.body });
+            res.render("cadastro");
         }
     },
     login: (req, res) => {
