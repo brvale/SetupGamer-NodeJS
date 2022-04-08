@@ -4,7 +4,6 @@ const session = require('express-session');
 
 var indexRouter = require('./routes/index');
 
-
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));

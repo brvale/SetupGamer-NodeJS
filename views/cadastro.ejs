@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts/formulario.js"></script>
 
     <title> <%- title %> </title>
 </head>
@@ -27,7 +28,7 @@
 
                 <div class="opcao">
 
-                    <button class="option__active"><p>Pessoa Física</p></button>
+                    <button><p>Pessoa Física</p></button>
                     <button><p>Pessoa Jurídica</p></button>
 
                 </div>
@@ -37,17 +38,9 @@
                 <div class="triangle-down"></div>
                 <h2>Insira seus dados</h2>
 
-                <% if(typeof(errors) != undefined ){ %>
-                    <p style="color: red">Ocorreu um erro</p>
-                    <ul>
-                        <% errors.forEach((error) =>{ %>
-                            <li> <%= error.msg %></li>
-                        <% }) %>
-                    </ul>
-                <% } %>
 
-
-                <form action="">
+                <form class="form_pf" action="">
+                    
                     <div class="caixa">
                         <label for="nome"></label>
                         <input type="text" id="nome" name="nome" placeholder="Nome">
@@ -64,7 +57,7 @@
                         <input type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento">
 
                         <label for="genero"></label>
-                        <input type="text" id="genero" name="genero" placeholder="Gênero">
+                        <input type="text" id="genero" name="genero" placeholder="Gênero">                        
                     </div>   
                 
                     <div class="caixa">
@@ -87,10 +80,13 @@
                     <button class="cadastrar">Cadastrar</button>
 
                 </form>
+
             </div>
         </section>
     </main>
 
     <footer><%- include("./includes/footer") %></footer>
 </body>
+
+script
 </html>

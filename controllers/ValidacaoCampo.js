@@ -7,22 +7,23 @@ module.exports = {
         let listaDeErro = validationResult(req);
 
         if(listaDeErro.isEmpty()){
-            let { nome, sobrenome, email, dataDeNascimento, cpf, genero, telefone, senha} = req.body;
+            let { nome, sobrenome, email, data_nasc, identificador_fiscal, telefone, senha} = req.body;
 
             let dadosUsuario = { 
                 nome, 
                 sobrenome, 
-                email, 
-                dataDeNascimento, 
-                cpf, 
-                genero, 
+                email, data_nasc, 
+                identificador_fiscal, 
                 telefone, 
                 senha
             }
 
             return Cliente.push(dadosUsuario);
         }else{
-            res.render("cadastro", { errors: listaDeErro.mapped(), old: req.body });
+            res.render("cadastro", { errors: listaDeErro.map(), old: req.body });
         }
+    },
+    login: (req, res) => {
+
     }
 }

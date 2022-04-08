@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const cadastroController = require("../controllers/validacaoCampo");
+
 const institucionalRouter = require('./institucional');
 const checkoutRouter = require('./checkout');
 
@@ -11,6 +13,8 @@ router.get("/", function(req, res, next) {
 router.get('/cadastro', function(req, res, next) {
     res.render("cadastro", { title: "Cadastro | SetupGamer" })
 });
+
+router.post('/cadastro', cadastroController.register);
 
 router.get("/monte-seu-pc", function(req, res, next) {
     res.render("monteSeuPc", { title: "Monte seu PC | SetupGamer" })
