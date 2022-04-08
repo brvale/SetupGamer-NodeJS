@@ -85,7 +85,7 @@ main h2 {
     width: 100%;
 }
 
-.opcao button:focus {
+.opcao .btn-form--active:focus {
     border: none;
     border-bottom: 2px solid var(--green);
     outline: none;
@@ -127,6 +127,8 @@ main input {
 main input:focus {
     outline: 0;
 }
+
+
 
 main input::placeholder {
     font-size: 1.7vh;
