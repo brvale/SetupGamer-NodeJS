@@ -3,27 +3,31 @@ const { Cliente } = require('../database/models')
 const { check, validationResult, body } = require("express-validator");
 
 module.exports = {
-    register: (req, res) => {
+    register: async (req, res) => {
         let listaDeErro = validationResult(req);
 
+        console.log(req.body)
+
         if(listaDeErro.isEmpty()){
-            let { nome, sobrenome, email, data_nasc, identificador_fiscal, telefone, senha} = req.body;
+            let { nome, sobrenome, email, dataDeNascimento, identificadorFiscal, telefone, senha} = req.body;
 
             let dadosUsuario = { 
                 nome, 
                 sobrenome, 
-                email, data_nasc, 
-                identificador_fiscal, 
+                email, 
+                data_nasc: dataDeNascimento, 
+                identificadorFiscal, 
                 telefone, 
                 senha
             }
 
-            return Cliente.push(dadosUsuario);
+            
+            await Cliente.create(dadosUsuario)
+            res.redirect("/#modal")
         }else{
-            res.render("cadastro");
+            res.redirect("/cadastro");
+            console.log(listaDeErro.array())
         }
-    },
-    login: (req, res) => {
-
     }
 }
+

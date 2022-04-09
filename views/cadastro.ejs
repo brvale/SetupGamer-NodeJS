@@ -38,7 +38,7 @@
                 <div class="triangle-down"></div>
                 <h2>Insira seus dados</h2>
 
-                <form action="../routes/cadastro.js" method="POST">
+                <form action="/cadastro" method="POST">
                     <div id="form-content--PF" class="form-content form-content--visible">
                         <div class="caixa">
                             <label for="nome"></label>
@@ -50,7 +50,7 @@
 
                         <div class="caixa2">
                             <label for="dataDeNascimento"></label>
-                            <input type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento" required>
+                            <input type="date" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento" required>
 
                             <label for="identificadorFiscal"></label>
                             <input type="text" id="identificadorFiscal" name="identificadorFiscal" placeholder="CPF" required>
@@ -66,7 +66,7 @@
                         <input type="password" id="senha" name="senha" placeholder="Senha" required>
                     </div>
 
-                    <div id="form-content--PJ" class="form-content">
+                    <!-- <div id="form-content--PJ" class="form-content">
                         <div class="caixa">
                             <label for="nome"></label>
                             <input type="text" id="nome" name="nome" placeholder="Nome" required>
@@ -91,7 +91,7 @@
     
                             <label for="senha"></label>
                             <input type="password" id="senha" name="senha" placeholder="Senha" required>
-                    </div>
+                    </div> -->
                     
                     <div class="termos">
                         <input type="checkbox" id="checkbox" name="checkbox">
@@ -99,7 +99,7 @@
                     </div>
 
                     <p class="politica">Ao criar uma conta, você está de acordo com nossa <strong><a href="./institucional/politica-privacidade">política de privacidade.</a></strong></p>
-                    <button class="cadastrar">Cadastrar</button>
+                    <button type="submit" class="cadastrar">Cadastrar</button>
 
                 </form>
 
