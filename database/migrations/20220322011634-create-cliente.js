@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       tipo_identificacao: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING(2)
       },
       nome: {
@@ -32,7 +32,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      identificador_fiscal: {
+      identificadorFiscal: {
         allowNull: false,
         type: Sequelize.STRING(18)
       },
