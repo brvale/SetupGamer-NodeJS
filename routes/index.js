@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-
-//const cadastroController = require("../controllers/validacaoCampo");
-
 const institucionalRouter = require('./institucional');
 const checkoutRouter = require('./checkout');
 const cadastroRouter = require("./cadastro");
@@ -43,7 +40,7 @@ router.get("/carrinhoDeCompra", (req, res, next) => {
     res.render("carrinhoDeCompra", { title: "Carrinho de Compra | SetupGamer"})
 })
 
-router.use(loginRouter);
+router.use(loginRouter); //está dizendo que todas as rotas podem acessar a rota do arquivo loginRouter
 router.use(cadastroRouter);
 router.use("/institucional", institucionalRouter);
 router.use("/checkout", checkoutRouter);

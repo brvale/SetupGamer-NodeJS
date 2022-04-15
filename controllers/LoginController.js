@@ -1,4 +1,5 @@
 const { Cliente } = require('../database/models')
+const bcrypt = require('bcrypt');
 
 let loginMethod = {
     signIn: async (req, res) => {
@@ -11,12 +12,22 @@ let loginMethod = {
             }
         });
 
-        if(!usuario){
+        if(usuario){
             req.session.usuario = usuario;
+            res.cookie("email", usuario, { maxAge: 500000})
             res.redirect('/')
+
         }else{
             console.log("email ou senha invalidos")
         }
+
+        
+
+        console.log(usuario);
+
+        /*if(){
+
+        }*/
     }
 }
 
