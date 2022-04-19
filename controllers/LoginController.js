@@ -1,4 +1,5 @@
 const { Cliente } = require('../database/models')
+const bcrypt = require('bcrypt');
 
 let loginMethod = {
     signIn: async (req, res) => {
@@ -13,10 +14,20 @@ let loginMethod = {
 
         if(usuario){
             req.session.usuario = usuario;
+            res.cookie("email", usuario, { maxAge: 500000})
             res.redirect('/')
+
         }else{
             res.redirect("/#modal");
         }
+
+        
+
+        console.log(usuario);
+
+        /*if(){
+
+        }*/
     }
 }
 

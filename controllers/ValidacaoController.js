@@ -1,10 +1,12 @@
 const { Cliente } = require('../database/models')
 
 const { check, validationResult, body } = require("express-validator");
+const bcrypt = require('bcrypt');
 
 module.exports = {
     register: async (req, res) => {
         let listaDeErro = validationResult(req);
+        let senhaCript = bcrypt.hashSync(senha, 10)
 
         console.log(req.body)
 
@@ -18,7 +20,7 @@ module.exports = {
                 data_nasc: dataDeNascimento, 
                 identificadorFiscal, 
                 telefone, 
-                senha
+                senha: senhaCript
             }
 
             
