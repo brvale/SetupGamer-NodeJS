@@ -14,13 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cliente.init({
+    tipo_identificacao: DataTypes.STRING(2),
     nome: DataTypes.STRING(100),
     sobrenome: DataTypes.STRING(100),
     email: DataTypes.STRING(100),
     data_nasc: DataTypes.DATE,
     identificadorFiscal: DataTypes.STRING(18),
     telefone: DataTypes.STRING(15),
-    senha: DataTypes.STRING(70)
+    senha: DataTypes.STRING(70),
+    admin: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Cliente',

@@ -41,7 +41,11 @@ router.get("/contato", function(req, res, next) {
 
 router.get("/carrinhoDeCompra", (req, res, next) => {
     res.render("carrinhoDeCompra", { title: "Carrinho de Compra | SetupGamer"})
-})
+});
+
+router.get("/cadastrar-produto", (req, res, next) => {
+    res.render("cadastroProduto", {title: "Cadastrar Produto | SetupGamer"})
+});
 
 router.use(loginRouter);
 router.use(cadastroRouter);

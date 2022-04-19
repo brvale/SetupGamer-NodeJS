@@ -15,6 +15,10 @@ app.use(session({
     saveUninitialized: true
 }));
 
+app.use(function(req, res, next) {
+    res.locals.usuario = req.session.usuario
+    next();
+});
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 

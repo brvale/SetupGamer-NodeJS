@@ -11,11 +11,11 @@ let loginMethod = {
             }
         });
 
-        if(!usuario){
+        if(usuario){
             req.session.usuario = usuario;
             res.redirect('/')
         }else{
-            console.log("email ou senha invalidos")
+            res.redirect("/#modal");
         }
     }
 }

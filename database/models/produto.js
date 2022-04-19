@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Produto.init({
     nome: DataTypes.STRING(100),
+    valor: DataTypes.FLOAT(5,2),
     descricao: DataTypes.STRING,
     foto: DataTypes.STRING,
     disponivel: DataTypes.BOOLEAN

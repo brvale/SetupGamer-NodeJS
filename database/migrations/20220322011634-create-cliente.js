@@ -34,6 +34,7 @@ module.exports = {
       },
       identificadorFiscal: {
         allowNull: false,
+        unique: true,
         type: Sequelize.STRING(18)
       },
       telefone: {
@@ -43,6 +44,11 @@ module.exports = {
       senha: {
         allowNull: false,
         type: Sequelize.STRING(70)
+      },
+      admin: {
+        defaultValue: false,
+        allowNull: false,
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
