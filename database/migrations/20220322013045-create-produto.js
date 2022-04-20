@@ -12,6 +12,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(100)
       },
+      valor: {
+        allowNull: false,
+        type: Sequelize.FLOAT(5, 2)
+      },
       descricao: {
         allowNull: false,
         type: Sequelize.STRING

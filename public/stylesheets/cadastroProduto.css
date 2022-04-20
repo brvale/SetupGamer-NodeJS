@@ -1,0 +1,68 @@
+:root {
+    --white: #fff;
+    --black: #111;
+    --black2: rgba(87, 87, 87, 0.719);
+    --green: #35C910;
+    --gray: #CACACA;
+    --gray2: #c4c4c4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 10vh 0;
+}
+
+main h1 {
+    text-align: center;
+    width: 50%;
+    color: #fff;
+    border-bottom: 2px solid var(--black2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+
+    margin-top: 10vh;
+}
+
+main .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 5vh 0;
+}
+
+main .form-group input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--black2);
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+}
+
+main input#nome {
+    width: 30em;
+    margin-bottom: 2vh;
+}
+
+main textarea {
+    resize: none;
+    background: none;
+    color: #fff;
+    border: 1px solid var(--black2);
+    width: 50em;
+    height: 7em;
+    margin-bottom: 2vh;
+}
+
+main input:focus, textarea:focus {
+    outline: none;
+}

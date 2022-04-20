@@ -58,6 +58,13 @@ nav {
     margin-right: 9%;
 }
 
+.nav-options a.btn-login {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
 .signup{
     background-color: #35c910;
     margin-right: 5px;

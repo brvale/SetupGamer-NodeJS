@@ -18,7 +18,7 @@ let loginMethod = {
             res.redirect('/')
 
         }else{
-            console.log("email ou senha invalidos")
+            res.redirect("/#modal");
         }
 
         /*if(!bcrypt.compareSync(senha, usuario.senha)){

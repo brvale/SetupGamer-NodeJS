@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%-title%></title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/cadastroProduto.css">
+
+</head>
+<body>
+    <header><%- include('./includes/header') %> </header>
+    <main>
+        <h1>Cadastrar Produto</h1>
+        <form action="/cadastrar-produto" method="POST">
+            <input type="file" name="foto" id="foto">
+
+            <div class="form-group">
+                <input type="text" name="nome" id="nome" placeholder="Título do produto">
+
+                <input type="text" name="valor" id="valor" placeholder="Preço do produto">
+            </div>
+            
+            <textarea name="descricao" id="descricao" placeholder="Descreva o produto"></textarea>
+            
+            <label for="disponivel">
+                <input type="checkbox" name="disponivel" id="disponivel">Disponivel
+            </label>
+
+            <button type="submit">Registrar</button>
+        </form>
+    </main>
+    <footer><%- include('./includes/footer') %> </footer>
+</body>
+</html>
