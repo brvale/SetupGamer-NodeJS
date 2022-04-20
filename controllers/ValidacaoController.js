@@ -20,7 +20,7 @@ module.exports = {
                 data_nasc: dataDeNascimento, 
                 identificadorFiscal, 
                 telefone, 
-                senha: senhaCript
+                senha/*: senhaCript*/
             }
 
             

@@ -12,7 +12,7 @@ let loginMethod = {
             }
         });
 
-        if(usuario){
+        if(usuario/* && !bcrypt.compareSync(senha, usuario.senha)*/){
             req.session.usuario = usuario;
             res.cookie("email", usuario, { maxAge: 500000})
             res.redirect('/')
@@ -21,7 +21,9 @@ let loginMethod = {
             console.log("email ou senha invalidos")
         }
 
-        
+        /*if(!bcrypt.compareSync(senha, usuario.senha)){
+            console
+        }*/
 
         console.log(usuario);
 
