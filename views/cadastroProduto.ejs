@@ -15,7 +15,7 @@
     <header><%- include('./includes/header') %> </header>
     <main>
         <h1>Cadastrar Produto</h1>
-        <form action="">
+        <form action="/cadastrar-produto" method="POST">
             <input type="file" name="foto" id="foto">
 
             <div class="form-group">
@@ -29,6 +29,8 @@
             <label for="disponivel">
                 <input type="checkbox" name="disponivel" id="disponivel">Disponivel
             </label>
+
+            <button type="submit">Registrar</button>
         </form>
     </main>
     <footer><%- include('./includes/footer') %> </footer>

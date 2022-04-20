@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
+/* const cookieParser = require('cookie-parser'); */
 
 var indexRouter = require('./routes/index');
 
@@ -21,7 +21,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(cookieParser());
+/* app.use(cookieParser()); */
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
