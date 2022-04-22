@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Frete.init({
     tipo: DataTypes.STRING,
-    valor: DataTypes.DECIMAL
+    valor: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'Frete',

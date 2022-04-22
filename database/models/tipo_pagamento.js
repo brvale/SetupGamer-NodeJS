@@ -14,7 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   TipoPagamento.init({
-    tipo: DataTypes.STRING(30)
+    tipo: {
+      type: DataTypes.STRING(30),
+      allowNull: false
+    },
+    desconto: {
+      type: DataTypes.FLOAT,
+      allowNull: true
+    }
   }, {
     sequelize,
     modelName: 'TipoPagamento',
