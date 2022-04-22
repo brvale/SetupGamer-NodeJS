@@ -1,47 +1,39 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Cliente extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      Cliente.hasMany(models.EnderecoEntrega, {
-          foreignKey: 'idCliente',
-      }),
-      Cliente.hasMany(models.Pedido, {
-        foreignKey: 'idCliente',
-    }),
-      Cliente.hasMany(models.ListaProduto, {
-          foreignKey: 'idCliente',
-          /*onDelete: true,
-          onUpdate: true*/
-      })
-    }
-  }
-  Cliente.init({
-    tipo_identificacao: DataTypes.STRING(2),
-    nome: DataTypes.STRING(100),
-    sobrenome: DataTypes.STRING(100),
-    email: DataTypes.STRING(100),
-    data_nasc: DataTypes.DATE,
-    identificadorFiscal: DataTypes.STRING(18),
-    telefone: DataTypes.STRING(15),
-    senha: DataTypes.STRING(70),
-    admin: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'Cliente',
-    tableName: 'clientes',
-    freezeTableName: false,
-    timestamps: true
-  });
-  return Cliente;
-};
+const Sequelize = require('sequelize');
 
-// cliente -> categoria -> produtos 1:N -> Pedidos foreignkey endereco, frete, listaProduto, listaPedido
-//sequelize model:generate --name tipo_midia --attributes nome:string, tipo_tag:
+module.exports = (sequelize, DataType) => {
+  const Cliente = sequelize.define('Cliente', {
+    id_cliente: {
+      type: DataType.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    tipo_identificacao: DataType.STRING(2),
+    nome: DataType.STRING(100),
+    sobrenome: DataType.STRING(100),
+    email: DataType.STRING(100),
+    data_nasc: DataType.DATE,
+    identificadorFiscal: DataType.STRING(18),
+    telefone: DataType.STRING(15),
+    senha: DataType.STRING(70),
+    admin: DataType.BOOLEAN,
+    createdAt: DataType.DATE,
+		updatedAt: DataType.DATE
+  }, {
+    tableName: 'clientes'
+  });
+
+  Cliente.associate = (models) => {
+    Cliente.hasMany(models.EnderecoEntrega, {
+      foreignKey: 'id_cliente'
+    }),
+    Cliente.hasMany(models.Pedido, {
+      foreignKey: 'id_cliente'
+    }),
+    Cliente.hasMany(models.ListaProduto, {
+      foreignKey: 'id_cliente'
+    })
+  };
+  
+  return Cliente;
+}

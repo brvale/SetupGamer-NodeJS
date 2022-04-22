@@ -1,40 +1,29 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class ListaProduto extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      Produto.belongsTo(models.Produto, {
-        foreignKey: 'id'
-      })
-    }
-  }
-  ListaProduto.init({
+const Sequelize = require('sequelize');
 
-    idProduto: DataTypes.INTEGER,
-    idPedido: DataTypes.INTEGER,
-    quantidade: {
-      type: DataTypes.INTEGER,
+module.exports = (sequelize, DataType) => {
+  const ListaProduto = sequelize.define('ListaProduto', {
+    id_listaProduto: {
+      type: DataType.INTEGER,
       allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
-    valor: {
-      type: DataTypes.FLOAT,
-      allownull: false,
-    },
+    id_cliente: DataType.INTEGER,
+    id_produto: DataType.INTEGER,
+    quantidade: DataType.INTEGER,
+    valor: DataType.FLOAT,
   }, {
-    sequelize,
-    modelName: 'ListaProduto',
-    tablename: 'listaProduto',
-    /*references: {
-      model: Produto,
-      key: id
-    }*/
+    tableName: 'listaProduto',
   });
+  
+  ListaProduto.associate = (models) => {
+    ListaProduto.belongsTo(models.Cliente, {
+      foreignKey: 'id_cliente'
+    }),
+    ListaProduto.belongsTo(models.Produto, {
+      foreignKey: 'id_produto'
+    })
+  }
+ 
   return ListaProduto;
 };

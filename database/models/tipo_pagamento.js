@@ -1,33 +1,24 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class TipoPagamento extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  TipoPagamento.init({
-    tipo: {
-      type: DataTypes.STRING(30),
-      allowNull: false
+const Sequelize = require('sequelize');
+
+module.exports = (sequelize, DataType) => {
+  const TipoPagamento = sequelize.define('TipoPagamento', {
+    id_pagamento: {
+      type: DataType.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
-    desconto: {
-      type: DataTypes.FLOAT,
-      allowNull: true
-    }
+    tipo: DataType.STRING(30),
+    desconto: DataType.FLOAT,
   }, {
-    sequelize,
-    modelName: 'TipoPagamento',
-    tableName: 'tipo_pagamento',
-    freezeTableName: false,
-    timestamps: true
+    tableName: 'tipo_pagamento'
   });
+
+  TipoPagamento.associate = (models) => {
+    TipoPagamento.hasMany(models.Pedido, {
+      foreignKey: 'id_pagamento'
+    })
+  }
+   
   return TipoPagamento;
 };

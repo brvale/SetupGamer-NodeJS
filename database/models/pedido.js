@@ -1,33 +1,42 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class pedido extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  pedido.init({
-    data: {
-      type: DataTypes.DATE,
-      allowNull: false
+const Sequelize = require('sequelize');
+
+module.exports = (sequelize, DataType) => {
+  const Pedido = sequelize.define('Pedido', {
+    id_pedido: {
+      type: DataType.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
-    valor: {
-      type: DataTypes.FLOAT,
-      allowNull: false
-    },
+    id_cliente: DataType.INTEGER,
+    id_pagamento: DataType.INTEGER,
+    id_endereco: DataType.INTEGER,
+    id_produto: DataType.INTEGER,
+    id_frete: DataType.INTEGER,
+    data: DataType.DATE,
+    valor: DataType.FLOAT,
+      
   }, {
-    sequelize,
-    modelName: 'Pedido',
-    tableName: 'pedido',
-    freezeTableName: false,
-    timestamps: true 
+    tableName: 'pedido'
   });
-  return pedido;
+
+  Pedido.associate = (models) => {
+    Pedido.belongsTo(models.Cliente, {
+      foreignKey: 'id_cliente'
+    }),
+    Pedido.belongsTo(models.TipoPagamento, {
+      foreignKey: 'id_pagamento'
+    }),
+    Pedido.belongsTo(models.EnderecoEntrega, {
+      foreignKey: 'id_endereco'
+    }),
+    Pedido.belongsTo(models.Produto, {
+      foreignKey: 'id_produto'
+    }),
+    Pedido.belongsTo(models.Frete, {
+      foreignKey: 'id_frete'
+    })
+  }
+   
+  return Pedido;
 };

@@ -1,31 +1,32 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class EnderecoEntrega extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  EnderecoEntrega.init({
-    cep: DataTypes.STRING(9),
-    destinatario: DataTypes.STRING(100),
-    rua: DataTypes.STRING(100),
-    numero_rua: DataTypes.INTEGER,
-    complemento: DataTypes.STRING(100),
-    bairro: DataTypes.STRING(100)
+const Sequelize = require('sequelize');
+
+module.exports = (sequelize, DataType) => {
+  const EnderecoEntrega = sequelize.define('EnderecoEntrega', {
+    id_endereco: {
+      type: DataType.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    id_cliente: DataType.INTEGER,
+    cep: DataType.STRING(9),
+    destinatario: DataType.STRING(100),
+    rua: DataType.STRING(100),
+    numero_rua: DataType.INTEGER,
+    complemento: DataType.STRING(100),
+    bairro: DataType.STRING(100)
   }, {
-    sequelize,
-    modelName: 'EnderecoEntrega',
     tableName: 'endereco_entrega',
-    freezeTableName: false,
-    timestamps: true
   });
+
+  EnderecoEntrega.associate = (models) => {
+      EnderecoEntrega.belongsTo(models.Cliente, {
+        foreignKey: 'id_cliente'
+      }),
+      EnderecoEntrega.hasMany(models.Pedido, {
+        foreignKey: 'id_endereco'
+      })
+    }
+
   return EnderecoEntrega;
 };

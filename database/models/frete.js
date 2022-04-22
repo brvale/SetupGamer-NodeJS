@@ -1,26 +1,24 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Frete extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  Frete.init({
-    tipo: DataTypes.STRING,
-    valor: DataTypes.FLOAT
+const Sequelize = require('sequelize');
+
+module.exports = (sequelize, DataType) => {
+  const Frete = sequelize.define('Frete', {
+    id_frete: {
+      type: DataType.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    tipo: DataType.STRING,
+    valor: DataType.FLOAT
   }, {
-    sequelize,
-    modelName: 'Frete',
     tableName: 'frete',
-    freezeTableName: false
   });
+  
+  Frete.associate = (models) => {
+    Frete.hasMany(models.Pedido, {
+      foreignKey: 'id_frete'
+    })
+  }
+   
   return Frete;
 };

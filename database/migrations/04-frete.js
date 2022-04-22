@@ -2,7 +2,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('frete', {
-      id: {
+      id_frete: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING(20)
       },
       valor: {
-        type: Sequelize.DECIMAL(3, 2)
+        type: Sequelize.FLOAT
       }
     });
   },
