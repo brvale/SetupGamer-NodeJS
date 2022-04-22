@@ -7,6 +7,8 @@ const cadastroRouter = require("./cadastro");
 const loginRouter = require("./login");
 const produtoRouter = require('./produtoRouter');
 
+const auth = require('../middleware/authAdmin')
+
 router.get("/", function(req, res, next) {
     res.render("index", { title: "SetupGamer" })
 });

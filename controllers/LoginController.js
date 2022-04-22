@@ -1,4 +1,4 @@
-const { Cliente } = require('../database/models')
+const { Cliente } = require('../database/models');
 const bcrypt = require('bcrypt');
 
 let loginMethod = {
