@@ -104,6 +104,18 @@ header nav img {
     cursor: pointer;
 }
 
+header h4 {
+    color: #fff;
+    margin-right: 1em;
+}
+
+header .btn-logout {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1em;
+    margin-right: 5px;
+}
+
 /*********** Login ***********/
 .modal {
     position: fixed;

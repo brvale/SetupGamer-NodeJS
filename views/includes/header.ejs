@@ -2,9 +2,17 @@
     <%- include("logo") %>
     <div class="nav-options">
         <p class="pt">Português(BR) - BRL</p>
-        <a href="../cadastro" class="signup">Cadastar-se</a>
-        <p class="separador">|</p>
-        <a href="#modal" class="btn-login"><img src="/img/login.png" alt="Logar"><%= usuario?.nome %></a>
+
+        <% if(usuario) { %>
+            <h4>Olá, <%= usuario.nome %></h4>
+            <p class="separador">|</p>
+            <a href="../logout" class="btn-logout">Sair</a>
+        <% } else { %>
+            <a href="../cadastro" class="signup">Cadastar-se</a>
+            <p class="separador">|</p>
+            <a href="#modal" class="btn-login"><img src="/img/login.png" alt="Logar"></a>
+        <% } %> 
+        
         <a href="/carrinhoDeCompra"><img src="/img/carrinho.png" alt="Carrinho"></a>
     </div>
 </nav>
