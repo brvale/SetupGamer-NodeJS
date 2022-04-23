@@ -108,8 +108,8 @@
     }
 }
 
-@media (max-width: 366px) {
-  .deconstructed{
-    font-size: 2vh;
-  } 
+@media (max-width: 530px) {
+  .logo {
+    margin: 0;
+  }
 }
