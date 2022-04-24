@@ -1,3 +1,13 @@
+
+
+function total(){
+  let input = document.getElementById('total');
+
+  if(input.value == ''){
+    input.replace('', 1);
+  }
+}
+
 function mais(){
     var atual = document.getElementById("total").value;
     var novo = atual - (-1); //Evitando Concatenacoes
