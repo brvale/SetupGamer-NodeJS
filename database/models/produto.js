@@ -10,12 +10,13 @@ module.exports = (sequelize, DataType) => {
     },
     id_categoria: DataType.INTEGER,
     nome: DataType.STRING(100),
-    valor: DataType.FLOAT(5,2),
+    valor: DataType.FLOAT(7,2),
     descricao: DataType.STRING,
     foto: DataType.STRING,
     disponivel: DataType.BOOLEAN,
   }, {
-    tableName: 'produtos'
+    tableName: 'produtos',
+    timestamps: true
   });
 
   Produto.associate = (models) => {

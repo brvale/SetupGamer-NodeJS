@@ -21,7 +21,7 @@ module.exports = {
       },
       valor: {
         allowNull: false,
-        type: Sequelize.FLOAT(5, 2)
+        type: Sequelize.FLOAT(7, 2)
       },
       descricao: {
         allowNull: false,

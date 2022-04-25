@@ -20,7 +20,8 @@ module.exports = (sequelize, DataType) => {
     createdAt: DataType.DATE,
 		updatedAt: DataType.DATE
   }, {
-    tableName: 'clientes'
+    tableName: 'clientes',
+    timestamps: true
   });
 
   Cliente.associate = (models) => {

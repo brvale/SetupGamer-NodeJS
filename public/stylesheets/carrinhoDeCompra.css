@@ -1,35 +1,37 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+
 :root {
     --white: #fff;
-    --black: #111;
+    --black: #000;
     --black2: rgba(87, 87, 87, 0.719);
     --black3: #20232d;
     --green: #35C910;
     --gray: #CACACA;
     --gray2: #c4c4c4;
-    --orange: #e39305;
 }
 
 h1{
-    display: flex;
-    margin-left: 20px;
-    padding-top: 20px;
+    margin: 5vh 0;
+    text-align: center;
+    color: #fff;
 }
 
-.container {
+main button.redirect {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 25px;
+}
+
+main .container {
     display: block;
     width: 100%;
 }
-.separarElementos{
+main .separarElementos{
     display: flex;
     /*justify-content: space-between;*/
     margin: 20px;
 }
-.produtoSelecionado {
+main .produtoSelecionado {
     height: auto;
     width: 100%;
     background-color: var(--black2);
@@ -47,7 +49,7 @@ h1{
 .finalizarCompra form{
     margin-bottom: 5px;
 }
-li {
+main li {
     list-style: none;
 }
 main img {
@@ -62,7 +64,7 @@ main article {
     /*align-items: center;*/
     padding: 1em 1em;
 }
-.img {
+main .img {
     display: flex;
     align-items: center;
     /*justify-content: center;*/
@@ -76,6 +78,12 @@ main .content{
     padding-left: 2%;
     padding-top: 1%;
 }
+
+main .content h2 {
+    color: #fff;
+    margin: 0;
+}
+
 main .componentes{
     padding: 0;
 }
@@ -129,10 +137,6 @@ input[type="number"] {
   }
   input[type="number"]{
   outline:none;
-  border-right: 0px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
   height: 20px;
   padding:1%;
   border-right: 0 px solid black;
@@ -161,13 +165,13 @@ div .a {
     cursor: pointer;   
 }
 button.menos{
-    border: 1px solid black;
-    background-color: #242424;
+    border: 1px solid var(--black2);
+    background-color: var(--green);
 }
 button.mais{
     order: -1;
-    border: 1px solid black;
-    background-color: #242424;
+    border: 1px solid var(--black2);
+    background-color: var(--green);
 }
 
 form {

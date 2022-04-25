@@ -17,6 +17,7 @@ module.exports = (sequelize, DataType) => {
     bairro: DataType.STRING(100)
   }, {
     tableName: 'endereco_entrega',
+    timestamps: true
   });
 
   EnderecoEntrega.associate = (models) => {

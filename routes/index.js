@@ -21,10 +21,6 @@ router.get("/monte-seu-pc", function(req, res, next) {
     res.render("monteSeuPc", { title: "Monte seu PC | SetupGamer" })
 });
 
-router.get("/categorias", function(req, res, next) {
-    res.render("categorias", { title: "Categorias | SetupGamer" })
-});
-
 router.get("/produto", function(req, res, next) {
     res.render("produto", { title: "Nome do produto" })
 });
@@ -41,7 +37,7 @@ router.get("/carrinhoDeCompra", (req, res, next) => {
     res.render("carrinhoDeCompra", { title: "Carrinho de Compra | SetupGamer"})
 });
 
-router.get("/cadastrar-produto", (req, res, next) => {
+router.get("/cadastrar-produto", auth.isAuthorized, (req, res, next) => {
     res.render("cadastroProduto", {title: "Cadastrar Produto | SetupGamer"})
 });
 

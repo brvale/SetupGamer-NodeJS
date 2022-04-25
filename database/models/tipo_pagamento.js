@@ -11,7 +11,8 @@ module.exports = (sequelize, DataType) => {
     tipo: DataType.STRING(30),
     desconto: DataType.FLOAT,
   }, {
-    tableName: 'tipo_pagamento'
+    tableName: 'tipo_pagamento',
+    timestamps: true
   });
 
   TipoPagamento.associate = (models) => {

@@ -1,4 +1,5 @@
-const {Produto} = require('../database/models');
+const Sequelize = require('sequelize');
+const {Produto, Categoria} = require('../database/models');
 
 const {validationResult} = require('express-validator');
 
@@ -7,7 +8,7 @@ module.exports = {
         let listaDeErro = validationResult(req);
 
         if(listaDeErro.isEmpty()) {
-            let {nome, valor, descricao, foto, disponivel} = req.body;
+            let {id_categoria, nome, valor, descricao, foto, disponivel} = req.body;
 
             if(disponivel === 'on') {
                 disponivel = true
@@ -16,6 +17,7 @@ module.exports = {
             }
 
             let dadosProduto = {
+                id_categoria,
                 nome,
                 valor,
                 descricao,
@@ -31,5 +33,10 @@ module.exports = {
             res.redirect("/cadastrar-produto");
             console.log(listaDeErro.array())
         }
+    },
+
+    list: async (req, res, next) => {
+        const produtos = await Produto.findAll();
+        return res.render('categorias', {produtos, title: "Categorias | SetupGamer"})
     }
 }
