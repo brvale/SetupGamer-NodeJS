@@ -164,6 +164,10 @@ div .a {
     outline:none;
     cursor: pointer;   
 }
+article .close button#redirect {
+    background-color: red;
+    border: none;
+}
 button.menos{
     border: 1px solid var(--black2);
     background-color: var(--green);
@@ -183,13 +187,21 @@ form {
     display: flex;
 }
 .concluir form button#resetar{
+    background-color: var(--orange);
+    border: none;
     order: -1;
 }
 .concluir form .valor input{
     width: 30%;
     max-width: 100%;
 }
-
+.concluir form button#enviar{
+    background-color: var(--green);
+    border: none;
+}
+.concluir form button#enviar a{
+    text-decoration: none;
+}
 
 
 
