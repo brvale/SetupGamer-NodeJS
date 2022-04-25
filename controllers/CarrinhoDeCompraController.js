@@ -4,12 +4,12 @@ const Op = Sequelize.Op;
 
 
 //Importando a model com desestruturação mostrando o caminho apenas até a model pois o index se encarrega de buscar por ela
-const { Pecas } = require('../database/models')
+const { Produto } = require('../database/models')
 
 const metodo = {
     //buscar peças todas as peças
     adicionarNoCarrinho: async (req, res) => {
-        let produto = await Pecas.findAll({
+        let produto = await Produto.findAll({
             where: {
                 peca: exemplo
             }
