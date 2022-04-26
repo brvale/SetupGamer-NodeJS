@@ -1,8 +1,15 @@
-function adicionarNoCarrinho(item) {
-    console.log(item)
+function adicionarNoCarrinho(evento) {
+  console.log(evento);
+  const target = evento.dataset;
+  const dataId = target.id;
+  console.log(dataId);
   let lista = localStorage.getItem("carrinho");
   let carrinho = {};
   lista = JSON.parse(lista);
 
-  //lista.forEach((item) => (item == "click") === carrinho.push(lista));
+  console.log(lista);
+
+  lista.forEach((item) => {
+   if(item == "click") carrinho.push(lista);
+  })
 }

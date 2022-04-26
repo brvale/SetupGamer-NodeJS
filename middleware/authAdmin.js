@@ -2,7 +2,8 @@ const {Cliente} = require('../database/models');
 
 module.exports = {
   isAuthorized: (req, res, next) => {
-    let usuario = req.session.usuario;
+
+    let usuario = Cliente.findOne();
 
     if(usuario.admin) {
       return next()
