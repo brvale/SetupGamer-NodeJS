@@ -5,6 +5,10 @@ const { Produto } = require('../database/models')
 
 module.exports = {
     filtrarArray: async (req, res) => {
-        const produto = await Produto.findAll
+        const produto = await Produto.findAll({
+            where: {
+                peca: exemplo
+            }
+        });
     }
 }

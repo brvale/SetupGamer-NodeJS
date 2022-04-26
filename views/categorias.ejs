@@ -18,6 +18,7 @@
     <script defer src="/scripts/owl/jquery.min.js"></script>
     <script defer src="/scripts/owl/owl.carousel.min.js"></script>
     <script defer src="/scripts/owl/config-categorias.js"></script>
+    <script defer src='/scripts/adicionarCarrinho.js'></script>
 
     <title> <%- title %>  </title>
 </head>
@@ -53,6 +54,7 @@
                                     </button>
                                 </div>
                             </article>
+                            <button class="btn-adc" data-id="<% produto %>" onclick="adicionarNoCarrinho()">Adicionar</button>
                         </div>
 
                     <% }}) %>
@@ -84,6 +86,8 @@
                                 </button>
                             </div>
                         </article>
+                        <button class="btn-adc" data-id="<% produto %>"
+                             onclick="adicionarNoCarrinho(produto)">Adicionar</button>
                     </div>
 
                 <% }}) %>
