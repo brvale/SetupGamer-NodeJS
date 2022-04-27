@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/stylesheets/carrinhoDeCompra.css">
         
         <script defer src="/scripts/inputNumber.js" crossorigin="anonymous"></script>
+        <script defer src="/scripts/adicionarCarrinho.js" crossorigin="anonymous"></script>
     
         <!--<script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>-->
     
@@ -29,47 +30,47 @@
 
                      <ul>
                             <li class="produto">
-                                
-                                <article>
-
-                                    <div class="img">
-
-                                        <img src="/img/produtos/gabinete4.jpg" alt="">
-                                        
-                                    </div>
-
-                                    <div class="alinhar">
-
-                                        
-
-                                    </div>
+                                <% if(typeof lista != "undefined") { %>
+                                    <% lista.forEach(produto => { %>
                                     
-                                    <div class="content">
+                                        <article>
 
-                                        <h2>example 1</h2>
-                                        <ul class="componentes">
-                                    
-                                            <li>item</li>
-                                            <li>item</li>
-                                            <li>item</li>
-                                            <li>item</li>
-                                            <li>item</li>
-                                        </ul>
+                                            <div class="img">
+        
+                                                <img src="/img/produtos/<%= produto.foto %>" alt="">
+                                                
+                                            </div>
+        
+                                            <div class="alinhar">
+        
+                                                
+        
+                                            </div>
+                                            
+                                            <div class="content">
+        
+                                                <h2><%= produto.nome %></h2>
+                                                <ul class="componentes">
+                                                    <li>item</li>
+                                                </ul>
+                                                
+        
+                                            </div>
+        
+                                        <div class="close">
+        
+                                            <button id="redirect">
+                                                <ion-icon name="trash-outline"></ion-icon>   
+                                            </button>
+        
+                                        </div>
+        
                                         
+        
+                                        </article>
 
-                                    </div>
-
-                                <div class="close">
-
-                                    <button id="redirect">
-                                        <ion-icon name="trash-outline"></ion-icon>   
-                                    </button>
-
-                                </div>
-
-                                
-
-                                </article>
+                                    <% }) %>
+                                <% } %>
 
                                 <div class="a">
                                     <!--class='total' id='total'-->

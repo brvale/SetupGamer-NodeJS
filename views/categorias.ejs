@@ -18,7 +18,7 @@
     <script defer src="/scripts/owl/jquery.min.js"></script>
     <script defer src="/scripts/owl/owl.carousel.min.js"></script>
     <script defer src="/scripts/owl/config-categorias.js"></script>
-    <script defer src='/scripts/adicionarCarrinho.js'></script>
+    <script defer src='/scripts/adicionarProdutoStorage.js'></script>
 
     <title> <%- title %>  </title>
 </head>
@@ -45,7 +45,7 @@
                                 <p><i class="fas fa-credit-card"></i> R$ 3.208,00 <small>em até 12x no cartão</small></p>
 
                                 <div class="btn-floatter">
-                                    <button data-id="<%= produto.id_produto %>" onclick="adicionarNoCarrinho(this)">
+                                    <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionarNoCarrinho(this)">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
                                     </button>
 
@@ -76,7 +76,7 @@
                             <p><i class="fas fa-credit-card"></i> R$ 3.208,00 <small>em até 12x no cartão</small></p>
 
                             <div class="btn-floatter">
-                                <button data-id="<%= produto.id_produto %>" onclick="adicionarNoCarrinho(this)">
+                                <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionarNoCarrinho(this)">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
                                 </button>
 
