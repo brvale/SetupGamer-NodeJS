@@ -37,7 +37,7 @@ router.get("/carrinhoDeCompra", (req, res, next) => {
     res.render("carrinhoDeCompra", { title: "Carrinho de Compra | SetupGamer"})
 });
 
-router.get("/cadastrar-produto", auth.isAuthorized, (req, res, next) => {
+router.get("/cadastrar-produto", (req, res, next) => {
     res.render("cadastroProduto", {title: "Cadastrar Produto | SetupGamer"})
 });
 
