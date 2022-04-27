@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/stylesheets/carrinhoDeCompra.css">
         
         <script defer src="/scripts/inputNumber.js" crossorigin="anonymous"></script>
-        <script defer src="/scripts/adicionarCarrinho.js" crossorigin="anonymous"></script>
+        <script defer src="/scripts/adicionarCarrinho.js" ></script>
     
         <!--<script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>-->
     
@@ -28,63 +28,8 @@
 
                     <div class="produtoSelecionado">
 
-                     <ul>
-                            <li class="produto">
-                                <% if(typeof lista != "undefined") { %>
-                                    <% lista.forEach(produto => { %>
-                                    
-                                        <article>
-
-                                            <div class="img">
-        
-                                                <img src="/img/produtos/<%= produto.foto %>" alt="">
-                                                
-                                            </div>
-        
-                                            <div class="alinhar">
-        
-                                                
-        
-                                            </div>
-                                            
-                                            <div class="content">
-        
-                                                <h2><%= produto.nome %></h2>
-                                                <ul class="componentes">
-                                                    <li>item</li>
-                                                </ul>
-                                                
-        
-                                            </div>
-        
-                                        <div class="close">
-        
-                                            <button id="redirect">
-                                                <ion-icon name="trash-outline"></ion-icon>   
-                                            </button>
-        
-                                        </div>
-        
-                                        
-        
-                                        </article>
-
-                                    <% }) %>
-                                <% } %>
-
-                                <div class="a">
-                                    <!--class='total' id='total'-->
-                                    <input  min=1 type="number" name="total" id="total" >
-                                    <button class='menos' onclick="menos()"> <ion-icon name="remove-outline"></ion-icon> </button>
-                                    <button class='mais' onclick="mais()"> <ion-icon name="add-outline"></ion-icon> </button>
-                                    <p>valor</p> 
-                                    
-                                </div>
-                                
-                                
-
-                            </li>          
-               
+                        <ul>
+                            
                         </ul>
 
                     <div class="concluir">

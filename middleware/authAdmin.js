@@ -10,7 +10,8 @@ module.exports = {
     } else {
       var err = new Error('Usuario não autorizado');
       err.status = 401;
-      res.redirect('/', err)
+      res.redirect('/');
+      res.send(err);
     }
   }
 }
