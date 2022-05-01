@@ -7,6 +7,7 @@
     --green: #35C910;
     --gray: #CACACA;
     --gray2: #c4c4c4;
+    --orange: #ffa300;
 }
 
 h1{
@@ -80,7 +81,7 @@ main .content{
 }
 
 main .content h2 {
-    color: #fff;
+    color: var(--orange);
     margin: 0;
 }
 

@@ -1,17 +1,19 @@
 function adicionarNoCarrinho() {
-    let lista = localStorage.getItem("carrinho");
+    let lista = localStorage.getItem("lista") ?? '[]'
     let carrinho = {};
 
-    lista = lista == null ? "[]" : lista;
+    
     console.log(lista);
     return JSON.parse(lista);
+    debugger
 };
 
-document.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const listagem = adicionarNoCarrinho();
     const ul = document.querySelector("div.produtoSelecionado > ul");
-
+    
     listagem.forEach(produto => {
+        
         const li = document.createElement('li');
         const article = document.createElement('article');
         const divImagem = document.createElement('div');
@@ -43,12 +45,13 @@ document.addEventListener('load', () => {
         img.src = "/img/produtos/" + produto?.foto;
         btnRedirect.setAttribute('id', 'redirect');
         icon.setAttribute('name', 'trash-outline');
-        input.setAttribute('min', '1');
         input.setAttribute('type', 'number');
+        input.setAttribute('min', '1');
+        input.setAttribute('value', '1');
         input.setAttribute('name', 'total');
-        input.setAttribute('id', 'total');
-        btnMenos.setAttribute('onclick', 'menos');
-        btnMais.setAttribute('onclick', 'mais');
+        input.setAttribute('id', `produto_${produto.id_produto}`);
+        btnMenos.setAttribute('onclick', `menos('produto_${produto.id_produto}')`);
+        btnMais.setAttribute('onclick', `mais('produto_${produto.id_produto}')`);
         iconRemove.setAttribute('name', 'remove-outline');
         iconAdd.setAttribute('name', 'add-outline');
 
@@ -71,8 +74,8 @@ document.addEventListener('load', () => {
         article.appendChild(divImagem);
         article.appendChild(divContent);
         article.appendChild(divClose);
-        article.appendChild(divA);
         li.appendChild(article);
+        li.appendChild(divA);
         ul.appendChild(li);
     })
 })

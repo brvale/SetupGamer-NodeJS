@@ -8,16 +8,24 @@ function total(){
   }
 }
 
-function mais(){
-    var atual = document.getElementById("total").value;
-    var novo = atual - (-1); //Evitando Concatenacoes
-    document.getElementById("total").value = novo;
+function mais(id){
+    var atual = document.getElementById(id);
+    var novo = +atual.value - (-1); //Evitando Concatenacoes
+ 
+    atual.value = novo;
+
   }
   
-  function menos(){
-    var atual = document.getElementById("total").value;
-    if(atual > 0) { //evita números negativos
-      var novo = atual - 1;
-      document.getElementById("total").value = novo;
+  function menos(id){
+    var atual = document.getElementById(id);
+    if(atual.value > 0) { //evita números negativos
+      var novo = atual.value - 1;
+
+      if(novo <= 0){
+        novo = 1;
+      }
+
+      atual.value = novo;
     }
   }
+
