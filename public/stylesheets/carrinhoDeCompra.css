@@ -169,6 +169,9 @@ article .close button#redirect {
     background-color: red;
     border: none;
 }
+button#resetar a{
+    text-decoration: none;
+}
 button.menos{
     border: 1px solid var(--black2);
     background-color: var(--green);
