@@ -1,3 +1,5 @@
+const buttonRedirect = document.querySelector('div .close button#redirect');
+
 function adicionarNoCarrinho() {
     let lista = localStorage.getItem("lista") ?? '[]'
     let carrinho = {};  
@@ -5,12 +7,12 @@ function adicionarNoCarrinho() {
     return JSON.parse(lista);
 };
 
-
-document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded não esperava que a página carregue para ser executado enquanto
+const carregaTela = () => { //DOMContentLoaded não esperava que a página carregue para ser executado enquanto
     const listagem = adicionarNoCarrinho();           //enquanto com o window o load espera, DOMContentLoaded usado com document e load com window
     const ul = document.querySelector("div.produtoSelecionado > ul");
+    ul.innerHTML = '';
     
-    listagem.forEach(produto => {
+    listagem.forEach((produto, index) => {
         
         const li = document.createElement('li'); 
         const article = document.createElement('article');
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded não es
         img.src = "/img/produtos/" + produto?.foto;
         btnRedirect.setAttribute('id', 'redirect');
         btnRedirect.setAttribute('type', 'submit');
+        btnRedirect.dataset.id = index;
         //btnRedirect.setAttribute('onclick', 'removerItemLista()');
         icon.setAttribute('name', 'trash-outline');
         input.setAttribute('type', 'number');
@@ -77,32 +80,58 @@ document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded não es
         li.appendChild(article);
         li.appendChild(divA);
         ul.appendChild(li);
+
+        btnRedirect.addEventListener('click', () => {
+            const lista = JSON.parse(localStorage.getItem('lista'));
+            
+            
+
+
+            lista.forEach(prod => {
+
+                if(produto.id_produto == prod.id_produto ){ 
+                    lista.splice(index, 1)
+                    
+                    localStorage.setItem('lista', JSON.stringify(lista))
+                    carregaTela()
+                    return
+                }
+
+            })
+            
+        
+            
+            //console.log(produto)
+        })
+
+
+        //btnRedirect.setAttribute('onclick', 'removerItemLista()');
         
     })
     
     
-})
+}
 
-const btncRedirect = document.querySelector('button#redirect')
-console.log(btnRedirect);
+
+document.addEventListener('DOMContentLoaded', carregaTela)
+
 /*btnRedirect.addEventListener('click', (event) => {
-    
+    const produto = localStorage.getItem('lista');
+    const btnRedirect = document.querySelector('button#redirect')
+
+    if(btnRedirect == event.click){
+        produto.forEach(produto => {
+            localStorage.removeItem(produto.produto_id)
+        })
+    }
+
 })*/
 
+/*buttonRedirect.addEventListener('click', (event) => {
+    const produto = localStorage.getItem('lista');
 
-
-/*function removerItemLista(lista){
-    
-    const buttonRemove = document.querySelector('button#redirect');
-    buttonRemove.onclick = function (lista) { 
-            if(localStorage == lista.id_produto){
-                localStorage.removeItem(lista.produto_id);
-            }
-    btnRedirect.setAttribute('onclick', removerItemLista());     
-    }
-}*/
-
-
+    event.produto.slice(produto.produto_id, produto.produto_id)
+})*/
 
 function resetarStorage(){
     if(localStorage != null){
