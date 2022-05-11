@@ -15,7 +15,7 @@ module.exports = (sequelize, DataType) => {
     id_frete: DataType.INTEGER,
     data: DataType.DATE,
     valor: DataType.FLOAT,
-      
+    status: DataType.STRING
   }, {
     tableName: 'pedido',
     timestamps: true

@@ -9,11 +9,12 @@ function adicionarNoCarrinho() {
 
 const carregaTela = () => { //DOMContentLoaded não esperava que a página carregue para ser executado enquanto
     const listagem = adicionarNoCarrinho();           //enquanto com o window o load espera, DOMContentLoaded usado com document e load com window
-    const ul = document.querySelector("div.produtoSelecionado > ul");
+    const ul = document.querySelector("div.produtoSelecionado form > ul");
     ul.innerHTML = '';
     
     listagem.forEach((produto, index) => {
         
+        const valorTotal = document.querySelector("div.concluir h3")
         const li = document.createElement('li'); 
         const article = document.createElement('article');
         const divImagem = document.createElement('div');
@@ -58,7 +59,7 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
         iconRemove.setAttribute('name', 'remove-outline');
         iconAdd.setAttribute('name', 'add-outline');
         
-        valor.innerText = produto?.valor;
+        valor.innerText = "R$" + produto?.valor;
         h2.innerText = produto?.nome;
         liComponentes.innerText = produto?.descricao;
         
@@ -83,9 +84,6 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
 
         btnRedirect.addEventListener('click', () => {
             const lista = JSON.parse(localStorage.getItem('lista'));
-            
-            
-
 
             lista.forEach(prod => {
 
@@ -98,17 +96,18 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
                 }
 
             })
-            
-        
-            
-            //console.log(produto)
         })
 
+        function calculaTotal() {
+            var total = 0;
 
-        //btnRedirect.setAttribute('onclick', 'removerItemLista()');
-        
+            total += produto?.valor
+
+            valorTotal.innerText = "Total: R$" + total;
+        }
+
+        calculaTotal();
     })
-    
     
 }
 

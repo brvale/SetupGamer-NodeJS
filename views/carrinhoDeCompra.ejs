@@ -27,42 +27,27 @@
                 
                 <section class="separarElementos">
 
-                    <div class="produtoSelecionado">    
+                    <div class="produtoSelecionado">
 
-                        <ul>
+                        <form action="/cartRouter" method="POST">
+                            <ul>
+                                
+                            </ul>
+
+                            <div class="concluir">
+
+                                <h3></h3>
                             
-                            
-
-                        </ul>
-
-                    <div class="concluir">
-
-                        <form action="">
-                            <div class="valor">
-
-                                <label for="valorTotal">Total:</label>
-                                <input type="number" name="valorTotal" id="valorTotal">
-                        
+                                <div class="container-concluir">
+                                    <button id='enviar' type="submit">Comprar</button>
+                                    <button id='resetar' onclick="resetarStorage()">Limpar</button>
+                                </div>
+                                
                             </div>
-                            <button id='enviar' type="submit"> <a href="/checkout/pagamento">COMPRAR</a></button>
-
-                    
-                            <button id='resetar' onclick="resetarStorage()"><a href="">RESETAR</a></button>
 
                         </form>
-                        
 
-                    </div>   
-                        
                     </div>
-<!----------------------------------------------------------------------------------------------------------------------->
-                    <!--<div class="finalizarCompra">
-                        <form action="" method="">
-                            <h2>SIMULE SEU FRETE E PRAZO</h2>
-                            <input type="text"><button>COMPRAR</button>
-                        </form>
-                    </div>-->
-                    
 
                 </section>
 

@@ -182,29 +182,26 @@ button.mais{
     background-color: var(--green);
 }
 
-form {
+main .concluir {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 10px;
+
+    margin: 0 15px;
 }
-.concluir form .valor{
-    display: flex;
-}
-.concluir form button#resetar{
-    background-color: var(--orange);
-    border: none;
-    order: -1;
-}
-.concluir form .valor input{
-    width: 30%;
-    max-width: 100%;
-}
-.concluir form button#enviar{
+
+main .concluir button {
     background-color: var(--green);
-    border: none;
+    border: solid #35c910;
+    border-radius: 11px;
+    color: #000;
+    cursor: pointer;
 }
-.concluir form button#enviar a{
-    text-decoration: none;
+
+main .concluir button:hover {
+    background-color: #1e7209d7;
+    border-color: #1e7209d8;
+    color: #fff;
 }
 
 

@@ -38,5 +38,10 @@ module.exports = {
     list: async (req, res, next) => {
         const produtos = await Produto.findAll();
         return res.render('categorias', {produtos, title: "Categorias | SetupGamer"})
+    },
+
+    listCart: async (req, res, next) => {
+        const produtos = await Produto.findAll();
+        return res.render('carrinhoDeCompra', {produtos, title: "Carrinho | SetupGamer"})
     }
 }
