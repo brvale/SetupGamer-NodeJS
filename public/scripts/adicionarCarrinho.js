@@ -11,6 +11,7 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
     const listagem = adicionarNoCarrinho();           //enquanto com o window o load espera, DOMContentLoaded usado com document e load com window
     const ul = document.querySelector("div.produtoSelecionado form > ul");
     ul.innerHTML = '';
+    let totalProdutos = 0;
     
     listagem.forEach((produto, index) => {
         
@@ -98,39 +99,20 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
             })
         })
 
-        function calculaTotal() {
-            var total = 0;
+        calculaTotal(produto.valor, input.value);
+        valorTotal.innerText = "Total: R$" + totalProdutos.toFixed(2);
+        
 
-            total += produto?.valor
-
-            valorTotal.innerText = "Total: R$" + total;
-        }
-
-        calculaTotal();
     })
     
+    function calculaTotal(produto, quantidade) {
+        totalProdutos += produto * quantidade;
+    }
 }
 
 
 document.addEventListener('DOMContentLoaded', carregaTela)
 
-/*btnRedirect.addEventListener('click', (event) => {
-    const produto = localStorage.getItem('lista');
-    const btnRedirect = document.querySelector('button#redirect')
-
-    if(btnRedirect == event.click){
-        produto.forEach(produto => {
-            localStorage.removeItem(produto.produto_id)
-        })
-    }
-
-})*/
-
-/*buttonRedirect.addEventListener('click', (event) => {
-    const produto = localStorage.getItem('lista');
-
-    event.produto.slice(produto.produto_id, produto.produto_id)
-})*/
 
 function resetarStorage(){
     if(localStorage != null){
