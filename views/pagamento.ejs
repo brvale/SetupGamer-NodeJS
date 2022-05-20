@@ -23,109 +23,103 @@
 
         <section class="options">
 
-            <!--Boleto-->
-            <div class="accordion">
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    <i class="fas fa-barcode"></i>Boleto bancário
-                </label>
-            </div>
-                <div class="panel" id="painel-boleto">
-                    <p>
-                        <strong>Importante: </strong>Verifique a data de vencimento informada no boleto. Se você não realizar o pagamento, o pedido será automaticamente cancelado.<br><br>
-                        O prazo de entrega informado durante a compra começa a contar a partir da confirmação do pagamento, que pode levar até 3 dias úteis após o pagamento.<br><br>
-                        O boleto não será enviado para seu endereço físico.
-                    </p>
+            <form action="">
 
-                    <h2>TERMOS DE PAGAMENTO</h2>
-                    <p>
-                        Para computadores, uma vez autorizado o pagamento, finalizamos e enviamos sua máquina em um prazo de 10 a 15 dias úteis, após toda uma rigorosa bateria 
-                        de testes feitas comprovando o funcionamento pleno de cada componente instalado. (O PRAZO DE 10 A 15 DIAS ÚTEIS PASSA A CONTAR NO PRÓXIMO DIA ÚTIL PÓS 
-                        CONFIRMAÇÃO DO PAGAMENTO) Após enviado começa a contar o prazo do frete no próximo dia útil; Os Computadores são enviados com a versão de avaliação do 
-                        Windows 10 Home 64 Bits Versão de testes de 30 dias.; IMPORTANTE: De acordo Art. 754 Código Civil, no ato da entrega, confira o(s) produto(s) e no caso 
-                        de avarias no transporte, registre a ocorrência no documento de entrega; reclamações posteriores não serão aceitas. 
-                        Para mais detalhe acesse: https://www.setupgamer.com.br/institucional/garantia-troca-devolucao
-                    </p>
+                <!--Boleto-->
+                <div class="accordion">
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        <i class="fas fa-barcode"></i>Boleto bancário
+                    </label>
                 </div>
-            
-            <!--Cartão de Crédito-->
-            <div class="accordion">
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    <i class="fas fa-credit-card"></i>Cartão de crédito
-                </label>   
-            </div>
-                <div class="panel" id="painel-cartao">
-                    <form action="">
-                        
-                        <div class="card-content">
-                            <label for="nome">Nome</label>
-                            <input name="nome" type="text" placeholder="nome registrado">
-                        </div>
-    
-                        <div class="card-content">
-                            <label for="num">Número do cartão</label>
-                            <input name="num" type="text" placeholder="0000 0000 0000 0000">
-                        </div>
-    
-                        <div class="card-container">
-    
-                            <label>Vencimento
-                                <input type="text" placeholder="00/0000"> 
-                            </label>
-                            <label>CVV
-                                <input type="text" placeholder="000"> 
-                            </label>
-    
-                        </div>
-                        
-                    </form>
-                </div>
-            
-            <!--Mercado Pago-->
-            <div class="accordion">
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    <img src="/img/mercado-pago.png" alt="Mercado Pago">Mercado Pago
-                </label>   
-            </div>
-                <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        
-                    </p>
-                </div>
-            
-            <!--PayPal-->
-            <div class="accordion">
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    <i class="fab fa-paypal"></i>PayPal
-                </label>   
-            </div>
-                <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        
-                    </p>
-                </div>
+                    <div class="panel" id="painel-boleto">
+                        <p>
+                            <strong>Importante: </strong>Verifique a data de vencimento informada no boleto. Se você não realizar o pagamento, o pedido será automaticamente cancelado.<br><br>
+                            O prazo de entrega informado durante a compra começa a contar a partir da confirmação do pagamento, que pode levar até 3 dias úteis após o pagamento.<br><br>
+                            O boleto não será enviado para seu endereço físico.
+                        </p>
 
-            <!--Valor total-->
-            <div class="container">
-                <p>Produto: <small class="valor1">R$ 2.583,17</small></p>
-                <p>Frete: <small class="valor2">R$ 69,29</small></p>
+                        <h2>TERMOS DE PAGAMENTO</h2>
+                        <p>
+                            Para computadores, uma vez autorizado o pagamento, finalizamos e enviamos sua máquina em um prazo de 10 a 15 dias úteis, após toda uma rigorosa bateria 
+                            de testes feitas comprovando o funcionamento pleno de cada componente instalado. (O PRAZO DE 10 A 15 DIAS ÚTEIS PASSA A CONTAR NO PRÓXIMO DIA ÚTIL PÓS 
+                            CONFIRMAÇÃO DO PAGAMENTO) Após enviado começa a contar o prazo do frete no próximo dia útil; Os Computadores são enviados com a versão de avaliação do 
+                            Windows 10 Home 64 Bits Versão de testes de 30 dias.; IMPORTANTE: De acordo Art. 754 Código Civil, no ato da entrega, confira o(s) produto(s) e no caso 
+                            de avarias no transporte, registre a ocorrência no documento de entrega; reclamações posteriores não serão aceitas. 
+                            Para mais detalhe acesse: https://www.setupgamer.com.br/institucional/garantia-troca-devolucao
+                        </p>
+                    </div>
+                
+                <!--Cartão de Crédito-->
+                <div class="accordion">
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        <i class="fas fa-credit-card"></i>Cartão de crédito
+                    </label>   
+                </div>
+                    <div class="panel" id="painel-cartao">
+                            
+                            <div class="card-content">
+                                <label for="nome">Nome</label>
+                                <input name="nome" type="text" placeholder="nome registrado">
+                            </div>
+        
+                            <div class="card-content">
+                                <label for="num">Número do cartão</label>
+                                <input name="num" type="text" placeholder="0000 0000 0000 0000">
+                            </div>
+        
+                            <div class="card-container">
+        
+                                <label>Vencimento
+                                    <input type="text" placeholder="00/0000"> 
+                                </label>
+                                <label>CVV
+                                    <input type="text" placeholder="000"> 
+                                </label>
+        
+                            </div>
+                    </div>
+                
+                <!--Mercado Pago-->
+                <div class="accordion">
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        <img src="/img/mercado-pago.png" alt="Mercado Pago">Mercado Pago
+                    </label>   
+                </div>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            
+                        </p>
+                    </div>
+                
+                <!--PayPal-->
+                <div class="accordion">
+                    <label class="form-control">
+                        <input type="radio" name="radio" />
+                        <i class="fab fa-paypal"></i>PayPal
+                    </label>   
+                </div>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            
+                        </p>
+                    </div>
 
-                <form action="">
+                <!--Valor total-->
+                <div class="submit-group">
+                    <p>Produto: <small class="valor1">R$ 2.583,17</small></p>
+                    <p>Frete: <small class="valor2">R$ 69,29</small></p>
 
                     <button type="submit">Confirmar</button>
-                    
-                </form>
+                </div>
 
-                
-            </div>
-
+            </form>
         </section>
 
     </main>

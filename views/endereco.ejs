@@ -20,42 +20,42 @@
     <main>
         <h1>ENDEREÇO DE ENTREGA</h1>
 
-        <form action="">
+        <form action="/checkout/salvar-endereco" method="POST">
             <section class="form-cep">
                 <label for="cep">CEP</label>
-                <input name="cep" type="text" placeholder="00000-000">
+                <input value="<%= enderecoUsuario?.cep %>" name="cep" type="text" placeholder="00000-000">
                 <p>Não sabe seu CEP? <a href="">Clique aqui</a></p>
             </section>
 
             <section class="form-endereco">
                 <div>
                     <label for="nomeDestinatario">Destinatário</label>
-                    <input name="nomeDestinatario" type="text" placeholder="Nome Completo">
+                    <input value="<%= enderecoUsuario?.destinatario %>" name="nomeDestinatario" type="text" placeholder="Nome Completo">
                 </div>
 
                 <div>
                     <label for="rua">Rua</label>
-                    <input name="rua" type="text" placeholder="Nome da rua">
+                    <input value="<%= enderecoUsuario?.rua %>" name="rua" type="text" placeholder="Nome da rua">
                 </div>
 
                 <div>
                     <label for="numero">Número</label>
-                    <input name="numero" type="text" placeholder="Nº da residência">
+                    <input value="<%= enderecoUsuario?.numero_rua %>" name="numero" type="text" placeholder="Nº da residência">
                 </div>
 
                 <div>
                     <label for="complemento">Complemento</label>
-                    <input name="complemento" type="text" placeholder="EX:. Nº Ap">
+                    <input value="<%= enderecoUsuario?.complemento %>" name="complemento" type="text" placeholder="EX:. Nº Ap">
                 </div>
 
                 <div>
                     <label for="bairro">Bairro</label>
-                    <input name="bairro" type="text" placeholder="Nome do bairro">
+                    <input value="<%= enderecoUsuario?.bairro %>" name="bairro" type="text" placeholder="Nome do bairro">
                 </div>
 
             </section>
 
-            <button>Salvar Endereço</button>
+            <button type="submit">Salvar Endereço</button>
         </form>
     </main>
     <footer> <%- include("./includes/footer") %> </footer>
