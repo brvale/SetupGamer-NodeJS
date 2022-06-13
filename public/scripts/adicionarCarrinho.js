@@ -1,12 +1,5 @@
 const buttonRedirect = document.querySelector('div .close button#redirect');
 
-function adicionarNoCarrinho() {
-    let lista = localStorage.getItem("lista") ?? '[]'
-    let carrinho = {};  
-    console.log(lista);
-    return JSON.parse(lista);
-};
-
 const carregaTela = () => { //DOMContentLoaded não esperava que a página carregue para ser executado enquanto
     const listagem = adicionarNoCarrinho();           //enquanto com o window o load espera, DOMContentLoaded usado com document e load com window
     const ul = document.querySelector("div.produtoSelecionado form > ul");
@@ -99,11 +92,14 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
             })
         })
 
+
         calculaTotal(produto.valor, input.value);
         valorTotal.innerText = "Total: R$" + totalProdutos.toFixed(2);
         
 
     })
+
+    alteraQuantidade();
     
     function calculaTotal(produto, quantidade) {
         totalProdutos += produto * quantidade;
