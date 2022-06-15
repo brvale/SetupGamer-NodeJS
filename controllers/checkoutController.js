@@ -3,6 +3,7 @@ const { EnderecoEntrega } = require('../database/models');
 
 module.exports = {
     endereco: async (req, res, next) => {
+        console.log(req.body);
         const enderecoUsuario = await EnderecoEntrega.findOne({
             where: {
                 id_cliente: 1

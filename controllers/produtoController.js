@@ -36,7 +36,10 @@ module.exports = {
     },
 
     list: async (req, res, next) => {
-        const produtos = await Produto.findAll();
+        const produtos = await Produto.findAll({ raw: true});
+        produtos.forEach((produto, index) => {
+            produto.quantidade = 1;
+        })
         return res.render('categorias', {produtos, title: "Categorias | SetupGamer"})
     },
 

@@ -6,9 +6,11 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
     ul.innerHTML = '';
     let totalProdutos = 0;
     
+    const valorTotal = document.querySelector("div.concluir h3")
+    valorTotal.innerText = ""
+
     listagem.forEach((produto, index) => {
         
-        const valorTotal = document.querySelector("div.concluir h3")
         const li = document.createElement('li'); 
         const article = document.createElement('article');
         const divImagem = document.createElement('div');
@@ -45,9 +47,11 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
         icon.setAttribute('name', 'trash-outline');
         input.setAttribute('type', 'number');
         input.setAttribute('min', '1');
-        input.setAttribute('value', '1');                       //Atribuição dos atributos
+        input.setAttribute('value', `${produto.quantidade}`);                       //Atribuição dos atributos
         input.setAttribute('name', 'total');
         input.setAttribute('id', `produto_${produto.id_produto}`);
+        btnMenos.setAttribute('type', 'button');
+        btnMais.setAttribute('type', 'button');
         btnMenos.setAttribute('onclick', `menos('produto_${produto.id_produto}')`);
         btnMais.setAttribute('onclick', `mais('produto_${produto.id_produto}')`);
         iconRemove.setAttribute('name', 'remove-outline');
@@ -85,11 +89,13 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
                     lista.splice(index, 1)
                     
                     localStorage.setItem('lista', JSON.stringify(lista))
-                    carregaTela()
+                    
                     return
                 }
 
             })
+            
+            carregaTela()
         })
 
 
@@ -103,6 +109,7 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
     
     function calculaTotal(produto, quantidade) {
         totalProdutos += produto * quantidade;
+        console.log(totalProdutos);
     }
 }
 

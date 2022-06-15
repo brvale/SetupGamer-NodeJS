@@ -9,9 +9,11 @@ function total(){
 }
 
 function mais(id){
-    var atual = document.getElementById(id);
-    var novo = +atual.value - (-1); //Evitando Concatenacoes
- 
+  
+  var atual = document.getElementById(id);
+  var novo = +atual.value - (-1); //Evitando Concatenacoes
+    const [,id_produto] = id.split("_")
+    qtdNoCarrinho(id_produto, novo)
     atual.value = novo;
 
   }
@@ -24,6 +26,9 @@ function mais(id){
       if(novo <= 0){
         novo = 1;
       }
+
+      const [,id_produto] = id.split("_")
+      qtdNoCarrinho(id_produto, novo)
 
       atual.value = novo;
     }

@@ -1,4 +1,4 @@
-function adicionarNoCarrinho(evento) {
+function adicionar(evento) {
   console.log(evento);
   const target = evento.dataset;
   const data = JSON.parse(target.id);
@@ -14,4 +14,6 @@ function adicionarNoCarrinho(evento) {
   localStorage.setItem("lista", JSON.stringify(lista));
 
   console.log(lista);
+
+  alteraQuantidade();
 }

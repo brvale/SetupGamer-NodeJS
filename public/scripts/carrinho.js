@@ -5,6 +5,16 @@ function adicionarNoCarrinho() {
     return JSON.parse(lista);
 };
 
+function qtdNoCarrinho(id, qtd) {
+    const array = adicionarNoCarrinho()
+    console.log(id)
+
+    const index = array.findIndex(obj => obj.id_produto == id);
+    array[index].quantidade = qtd;
+    localStorage.setItem('lista', JSON.stringify(array));
+    carregaTela()
+}
+
 function quantidadeProdutos(){
     return adicionarNoCarrinho().length;
 }

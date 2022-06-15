@@ -35,8 +35,7 @@
             <div class="owl-carousel owl-theme">
 
                 <% produtos.forEach(produto => { %>
-                    <% if(produto.id_categoria === 1) { %>
-
+                    <% if(produto.id_categoria === 1) { %>                   
                         <div class="item">
                             <article>
                                 <img src="/img/produtos/<%= produto.foto %>" alt="<%= produto.nome %>" />
@@ -45,7 +44,7 @@
                                 <p><i class="fas fa-credit-card"></i> R$ 3.208,00 <small>em até 12x no cartão</small></p>
 
                                 <div class="btn-floatter">
-                                    <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionarNoCarrinho(this)">
+                                    <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionar(this)">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
                                     </button>
 
@@ -76,7 +75,7 @@
                             <p><i class="fas fa-credit-card"></i> R$ 3.208,00 <small>em até 12x no cartão</small></p>
 
                             <div class="btn-floatter">
-                                <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionarNoCarrinho(this)">
+                                <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionar(this)">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
                                 </button>
 
