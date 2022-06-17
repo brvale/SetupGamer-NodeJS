@@ -18,3 +18,9 @@ h1 {
     border-top: solid 3px #35C910;
     font-size: 1.8vh;
 }
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
