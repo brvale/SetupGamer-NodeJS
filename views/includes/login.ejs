@@ -9,14 +9,14 @@
             <small>Seja bem vindo(a) novamente!</small>
         </p>
 
-        <form action="" class="form-login">
+        <form action="/login" method='POST' class="form-login">
             <div class="form-group">
-                <input type="email" name="logemail" class="form-style" placeholder="E-mail" id="logemail" autocomplete="off">
+                <input type="email" name="email" class="form-style" placeholder="E-mail" id="logemail" autocomplete="off" required> 
                 <i class="fas fa-at"></i>
             </div>	
 
             <div class="form-group">
-                <input type="password" name="logpass" class="form-style" placeholder="Senha" id="logpass" autocomplete="off">
+                <input type="password" name="senha" class="form-style" placeholder="Senha" id="logpass" autocomplete="off" required>
                 <i class="fas fa-lock"></i>
             </div>
 
@@ -24,7 +24,7 @@
              
              <button type="submit">Entrar</button>
 
-             <a href="../cadastro" class="cadastro-link">Cadastrar-se</a>
+             <a href="/cadastro" class="cadastro-link">Cadastrar-se</a>
         </form>
     </div>
 </div>

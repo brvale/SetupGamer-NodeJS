@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/frete.css" />
+
+    <!--JS-->
+    <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+   
+    <title><%- title %></title>
+</head>
+<body>
+    <header><%- include("./includes/header") %></header>
+    <main>
+        <h1>FORMA DE ENTREGA</h1>
+
+        <form action="/checkout/frete" method="POST">
+            <section class="form-frete">
+                <label class="form-control">
+                    <input type="radio" value="1" name='transporte'/>
+                        <span>
+                            <strong>PAC Econômico</strong>
+                            <small>Prazo de até 14 dias úteis</small>
+                        </span>
+                        <div>R$ 50,00</div>
+                </label>
+
+                <label class="form-control">
+                    <input type="radio" value="2" name='transporte'/>
+                        <span>
+                            <strong>Transportadora</strong>
+                            <small>Prazo de até 15 dias úteis</small>
+                        </span>
+                        <div>R$ 80,00</div>
+                </label>
+
+                <label class="form-control">
+                    <input type="radio" value="3" name='transporte'/>
+                        <span>
+                            <strong>SEDEX</strong>
+                            <small>Prazo de até 9 dias úteis</small>
+                        </span>
+                        <div>R$ 100,00</div>
+                </label>
+            </section>
+
+            <section class="form-btn">
+                <button>Salvar Frete</button>
+            </section>
+        </form>
+    </main>
+    <footer><%- include("./includes/footer") %></footer>
+</body>
+</html>

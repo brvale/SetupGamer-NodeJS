@@ -6,6 +6,11 @@
     
         <link rel="stylesheet" href="/stylesheets/style.css" />
         <link rel="stylesheet" href="/stylesheets/logo.css" />
+        <link rel="stylesheet" href="/stylesheets/carrinhoDeCompra.css">
+        
+        <script defer src="/scripts/inputNumber.js" crossorigin="anonymous"></script>
+        <script defer src="/scripts/adicionarCarrinho.js" ></script>
+        <script defer src="/scripts/storageSalvoCarrinho.js"></script>
     
         <!--<script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>-->
     
@@ -23,14 +28,24 @@
                 <section class="separarElementos">
 
                     <div class="produtoSelecionado">
-                        <ul>
-                            <li>
-                                <article></article> <!--colocar border-bottom que ele sempre separa-->
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="finalizarCompra">
+                        <form action="/checkout/endereco" method="POST">
+                            <ul>
+                                
+                            </ul>
+
+                            <div class="concluir">
+
+                                <h3></h3>
+                            
+                                <div class="container-concluir">
+                                    <button id='enviar' type="submit" onclick="enviaCarrinho(event)">Comprar</button>
+                                    <button id='resetar' onclick="resetarStorage(event)">Limpar</button>
+                                </div>
+                                
+                            </div>
+
+                        </form>
 
                     </div>
 
@@ -49,4 +64,7 @@
 
         <footer><%- include("./includes/footer") %></footer>
     </body> 
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
           </html>   

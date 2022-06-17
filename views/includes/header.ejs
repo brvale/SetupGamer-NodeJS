@@ -2,34 +2,41 @@
     <%- include("logo") %>
     <div class="nav-options">
         <p class="pt">Português(BR) - BRL</p>
-        <a href="../cadastro" class="signup">Cadastar-se</a>
-        <p class="separador">|</p>
-        <a href="#modal"><img src="/img/login.png" alt="Logar"></a>
-        <a href=""><img src="/img/carrinho.png" alt="Carrinho"></a>
+
+        <% if(usuario) { %>
+            <h4>Olá, <%= usuario.nome %></h4>
+            <p class="separador">|</p>
+            <a href="../logout" class="btn-logout">Sair</a>
+        <% } else { %>
+            <a href="../cadastro" class="signup">Cadastar-se</a>
+            <p class="separador">|</p>
+            <a href="#modal" class="btn-login"><img src="/img/login.png" alt="Logar"></a>
+        <% } %> 
+        
+        <a href="/carrinhoDeCompra" class="icone-botao">
+            <img src="/img/carrinho.png" alt="Carrinho">
+            <span id="icone-carrinho"></span>
+        </a>
     </div>
 </nav>
 <div class="menu-bar">
     <ul>
         <li>
-          <a href="../sobre-nos">A SetupGamer</a>
+          <a href="/sobre-nos">A SetupGamer</a>
         </li>
         <li>
-          <a href="#">Pc's gamers</a>
+          <a href="/categorias#pcs-gold">Pc's Gold</a>
         </li>
         <li>
-          <a href="#">WorkStation</a>
+          <a href="/categorias#pcs-bronze">Pc's Bronze</a>
         </li>
         <li>
-          <a href="#">Pc's office</a>
-        </li>
-        <li>
-            <a href="#">Peças</a>
-        </li>
-        <li>
-            <a href="../monte-seu-pc">Monte seu pc</a>
+            <a href="/monte-seu-pc">Monte seu pc</a>
         </li>
     </ul>
 </div>
+
+<script src="/scripts/carrinho.js"></script>
 
 <!--modal-->
 <%- include('login') %> 

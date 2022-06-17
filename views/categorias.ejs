@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/logo.css">
+    <link rel="stylesheet" href="/stylesheets/categorias.css">
+    <link rel="stylesheet" href="/stylesheets/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/stylesheets/owl/owl.theme.default.min.css" />
+
+    <!--JS-->
+    <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts/owl/jquery.min.js"></script>
+    <script defer src="/scripts/owl/owl.carousel.min.js"></script>
+    <script defer src="/scripts/owl/config-categorias.js"></script>
+    <script defer src='/scripts/adicionarProdutoStorage.js'></script>
+
+    <title> <%- title %>  </title>
+</head>
+
+<body>
+    <header><%- include('./includes/header')%></header>
+    <main>
+        <h1>CATEGORIAS</h1>
+        <div class="triangle-down"></div>
+        
+    <!--PC's Gamers - Gold-->
+      <section id="pcs-gold">
+            <h2>Pc's Gamers - Gold</h2>
+            <div class="owl-carousel owl-theme">
+
+                <% produtos.forEach(produto => { %>
+                    <% if(produto.id_categoria === 1) { %>                   
+                        <div class="item">
+                            <article>
+                                <img src="/img/produtos/<%= produto.foto %>" alt="<%= produto.nome %>" />
+                                <p><%= produto.nome %></p>
+                                <p><i class="fas fa-barcode"></i> R$ <%= String(produto.valor).replace(".", ",") %> <small>no boleto</small></p>
+                                <p><i class="fas fa-credit-card"></i> R$ 3.208,00 <small>em até 12x no cartão</small></p>
+
+                                <div class="btn-floatter">
+                                    <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionar(this)">
+                                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
+                                    </button>
+
+                                    <button>
+                                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg2dark.svg" alt="view">
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                    <% }}) %>
+    
+            </div>
+      </section>
+
+      <section id="pcs-bronze">
+        <h2>Pc's Gamers - Bronze</h2>
+        <div class="owl-carousel owl-theme">
+
+            <% produtos.forEach(produto => { %>
+                <% if(produto.id_categoria === 3) { %>
+
+                    <div class="item">
+                        <article>
+                            <img src="/img/produtos/<%= produto.foto %>" alt="<%= produto.nome %>" />
+                            <p><%= produto.nome %></p>
+                            <p><i class="fas fa-barcode"></i> R$ <%= String(produto.valor).replace(".", ",") %> <small>no boleto</small></p>
+                            <p><i class="fas fa-credit-card"></i> R$ 3.208,00 <small>em até 12x no cartão</small></p>
+
+                            <div class="btn-floatter">
+                                <button data-id="<%= JSON.stringify(produto) %>" onclick="adicionar(this)">
+                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
+                                </button>
+
+                                <button>
+                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg2dark.svg" alt="view">
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+
+                <% }}) %>
+
+        </div>
+  </section>
+
+    </main>
+    <footer><%- include('./includes/footer')%></footer>
+</body>
+
+</html>

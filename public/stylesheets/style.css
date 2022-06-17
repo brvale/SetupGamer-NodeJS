@@ -14,6 +14,25 @@ body {
 h1, h2 {
     font-style: italic;
 }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #35C910;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #242424 60%,
+        #000 80%
+    );
+    border-radius: 10px;
+  }
 
 /*********** Header ***********/
 header {
@@ -26,7 +45,7 @@ header {
 
 nav {
     width: 100%;
-    height: 8vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,12 +56,20 @@ nav {
     display: flex;
     align-items: center;
     margin-right: 9%;
+    max-height: 80px;
+}
+
+.nav-options a.btn-login {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
 }
 
 .signup{
     background-color: #35c910;
     margin-right: 5px;
-    padding: 2px 0.5vw;
+    padding: 2px 0.5em;
     color: black;
     font-size: 1.6vh;
     text-decoration: none;
@@ -76,6 +103,18 @@ header nav img {
     margin-left: 5px;
     position: relative;
     cursor: pointer;
+}
+
+header h4 {
+    color: #fff;
+    margin-right: 1em;
+}
+
+header .btn-logout {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1em;
+    margin-right: 5px;
 }
 
 /*********** Login ***********/
@@ -268,7 +307,7 @@ footer div.container1 {
 .footer-enviar{
     height: 4vh;
     width: 4vw;
-    min-width: 29px;
+    min-width: 40px;
     background-color: #35C910;
     border: none;
     border-radius: 4px;
@@ -282,6 +321,7 @@ footer img.logo-footer {
     margin-bottom: 3vh;
     height: 23vh;
     width: 21vw;
+    margin-right: 5%;
 }
 
 footer div.container2 {
@@ -290,8 +330,10 @@ footer div.container2 {
 }
 
 footer div.footer-info {
+    padding-top: 1%;
     margin-right: 9%;
     display: flex;
+    min-width: 280px;
 }
 
 footer .institucional {
@@ -300,7 +342,7 @@ footer .institucional {
 
 footer div.footer-info ul {
     list-style: none;
-    font-size: 2vmin;
+    font-size: 1em;
     color: white;
 }
 
@@ -319,8 +361,38 @@ footer a {
 }
 
 /*********** media ***********/
-@media (width: 530px) {
+@media (max-width: 530px) {
+    header {
+        border-bottom: 1px solid #35C910;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
     footer img.logo-footer {
-        width: 8rem;
+        width: 200px;
+        margin-top: 3%;
+    }
+
+    header div.menu-bar {
+        display: none;
+    }
+
+    footer div.container2 {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    footer div.footer-info {
+        padding-left: 1%
+    }
+}
+
+@media (max-width: 600px) {
+    footer div.footer-info ul {
+        font-size: 13px;
+        padding-left: 20%
     }
 }

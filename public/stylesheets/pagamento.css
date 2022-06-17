@@ -21,7 +21,7 @@ h1 {
     color: #fff;
 }
 
-.accordion, .container {
+.accordion, .submit-group {
     background-color: var(--black2);
     color: #fff;
     padding: 18px;
@@ -34,10 +34,6 @@ h1 {
 
 .accordion {
     border-bottom: 1px solid var(--gray2);
-}
-
-.container {
-    font-size: 2vh;
 }
 
 .form-control {
@@ -174,7 +170,26 @@ small.valor1 {
 }
 
 small.valor2 {
-    margin-left: 5vw;
+    margin-left: 4vw;
+}
+
+.submit-group {
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit-group button{
+    border: solid #35c910;
+    border-radius: 11px;
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+.submit-group button:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
 }
 
 @media (max-width: 640px) {

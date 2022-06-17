@@ -1,28 +1,219 @@
-* {
-    box-sizing: border-box;
-}
+
 :root {
     --white: #fff;
-    --black: #111;
+    --black: #000;
     --black2: rgba(87, 87, 87, 0.719);
     --black3: #20232d;
     --green: #35C910;
     --gray: #CACACA;
     --gray2: #c4c4c4;
-    --orange: #e39305;
+    --orange: #ffa300;
 }
 
-.container {
+h1{
+    margin: 5vh 0;
+    text-align: center;
+    color: #fff;
+}
+
+main button.redirect {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 25px;
+}
+
+main .container {
+    display: block;
+    width: 100%;
+}
+main .separarElementos{
+    display: flex;
+    /*justify-content: space-between;*/
+    margin: 20px;
+}
+main .produtoSelecionado {
+    height: auto;
+    width: 100%;
+    background-color: var(--black2);
+    margin-right: 15px;
+    border-top: var(--green) solid 5px;
+}
+.finalizarCompra{
     display: flex;
     justify-content: center;
+    height: 500px;
+    width: 100%;
+    background-color: var(--black2);
+    padding-top: 10px;  
+}
+.finalizarCompra form{
+    margin-bottom: 5px;
+}
+main li {
+    list-style: none;
+}
+main img {
+    width: 12em;
+    max-width: 100%;
+    height: 13em;
+}
+main article {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /*align-items: center;*/
+    padding: 1em 1em;
+}
+main .img {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    padding: 2vh 0;
+    width: 20%;
+
+}
+main .content{
+    width: 20%;
+    max-width: 100%;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+main .content h2 {
+    color: var(--orange);
+    margin: 0;
+}
+
+main .componentes{
+    padding: 0;
+}
+.produtoSelecionado ul li{
+    padding: 0;
+    
+}
+main .produto{
+    border-bottom: 1px solid var(--black2);
+}
+main .produto .a{
+    display: flex;
+    margin-left: 60%;
+    margin-bottom: -3em;
+}
+main .produto .a p{
+    margin-left: 5em;
+}   
+main .close{
+    width: 55%;
+    text-align: right;
+    padding-top: 1%;
+}
+main .a input{
+        width: 5%;
+        border: 1px solid black;
+        text-align: center
+}
+main .a{
     align-items: center;
 }
-.container .separarElementos{
+main .finalizarCompra button{
+    background-color: var(--green);
+    padding: 1vh;
+    border: none;
+    border-radius: 8px;
+    margin-left: 2vw; 
+}
+main .finalizarCompra input{
+    color: var(--black2);
+}
+/*-----------------*/
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }
+  input[type="number"]{
+  outline:none;
+  height: 20px;
+  padding:1%;
+  border-right: 0 px solid black;
+  }
+  label, input, button {
+      font-size: inherit;
+      padding: 0.2em;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+}
+div .a {
+    position: relative;
+    bottom: 55px;   
+}
+.a button {
+    height:20px;
+    padding:1%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    border-left: 0px solid black;
+    padding-left:2%;
+    padding-right:2%;
+    outline:none;
+    cursor: pointer;   
+}
+article .close button#redirect {
+    background-color: red;
+    border: none;
+}
+button#resetar a{
+    text-decoration: none;
+}
+button.menos{
+    border: 1px solid var(--black2);
+    background-color: var(--green);
+}
+button.mais{
+    order: -1;
+    border: 1px solid var(--black2);
+    background-color: var(--green);
+}
+
+main .concluir {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+
+    margin: 0 15px;
 }
-.produtoSelecionado {
-    width: 700px;
-    height: 800px;
-    background-color: var(--orange);
+
+main .concluir button {
+    background-color: var(--green);
+    border: solid #35c910;
+    border-radius: 11px;
+    color: #000;
+    cursor: pointer;
 }
+
+main .concluir button:hover {
+    background-color: #1e7209d7;
+    border-color: #1e7209d8;
+    color: #fff;
+}
+
+/*div .concluir{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 53%;
+    margin-right: 1%;
+    max-width: 100%;
+}*/
+/*@media (max-width: 1350px)  {
+    main .a input {
+        width: 6%;
+        max-width: 100%;
+    }
+}*/

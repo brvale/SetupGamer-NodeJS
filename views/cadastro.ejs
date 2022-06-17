@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <script defer src="https://kit.fontawesome.com/6837938f61.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts/formCadastro.js" crossorigin="anonymous"></script>
 
     <title> <%- title %> </title>
 </head>
@@ -27,8 +28,8 @@
 
                 <div class="opcao">
 
-                    <button class="option__active"><p>Pessoa Física</p></button>
-                    <button><p>Pessoa Jurídica</p></button>
+                    <button id="btnPF" class="btn-form--active"><p>Pessoa Física</p></button>
+                    <button id="btnPJ" class="btn-form"><p>Pessoa Jurídica</p></button>
 
                 </div>
 
@@ -37,46 +38,71 @@
                 <div class="triangle-down"></div>
                 <h2>Insira seus dados</h2>
 
-                <form action="">
-                    <div class="caixa">
-                        <label for="nome"></label>
-                        <input type="text" id="nome" name="nome" placeholder="Nome">
-                
-                        <label for="sobrenome"></label>
-                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
-                    </div>
+                <form action="/cadastro" method="POST">
+                    <div id="form-content--PF" class="form-content form-content--visible">
+                        <div class="caixa">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                    
+                            <label for="sobrenome"></label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+                        </div>
 
+                        <div class="caixa2">
+                            <label for="dataDeNascimento"></label>
+                            <input type="date" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento" required>
+
+                            <label for="identificadorFiscal"></label>
+                            <input type="text" id="identificadorFiscal" name="identificadorFiscal" placeholder="CPF" required>
+
+                            <label for="telefone"></label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                        </div>
+                    
                         <label for="email"></label>
                         <input type="email" id="email" name="email" placeholder="Email" required>
 
-                    <div class="caixa">
-                        <label for="dataDeNascimento"></label>
-                        <input type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento">
-
-                        <label for="genero"></label>
-                        <input type="text" id="genero" name="genero" placeholder="Gênero">
-                    </div>   
-                
-                    <div class="caixa">
-                        <label for="cpf"></label>
-                        <input type="text" id="cpf" name="cpf" placeholder="CPF">
-
-                        <label for="telefone"></label>
-                        <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+                        <label for="senha"></label>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required>
                     </div>
 
-                        <label for="senha"></label>
-                        <input type="password" id="senha" name="senha" placeholder="Senha">
-
+                    <!-- <div id="form-content--PJ" class="form-content">
+                        <div class="caixa">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                    
+                            <label for="sobrenome"></label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+                        </div>
+    
+                        <div class="caixa2">
+                            <label for="nomeEmpresa"></label>
+                            <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Nome da Empresa" required>
+    
+                            <label for="identificadorFiscal"></label>
+                            <input type="text" id="identificadorFiscal" name="identificadorFiscal" placeholder="CNPJ" required>
+    
+                            <label for="telefone"></label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                        </div>
+                        
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+    
+                            <label for="senha"></label>
+                            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    </div> -->
+                    
                     <div class="termos">
                         <input type="checkbox" id="checkbox" name="checkbox">
                         <label for="checkbox">Receber novidades e promoções por e-mail</label>
                     </div>
 
-                    <p class="politica">Ao criar uma conta, você está de acordo com nossa <strong>política de privacidade.</strong></p>
-                    <button class="cadastrar">Cadastrar</button>
+                    <p class="politica">Ao criar uma conta, você está de acordo com nossa <strong><a href="./institucional/politica-privacidade">política de privacidade.</a></strong></p>
+                    <button type="submit" class="cadastrar">Cadastrar</button>
 
                 </form>
+
             </div>
         </section>
     </main>

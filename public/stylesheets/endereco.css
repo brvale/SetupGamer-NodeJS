@@ -1,0 +1,122 @@
+:root {
+    --white: #fff;
+    --black: #111;
+    --black2: rgba(87, 87, 87, 0.719);
+    --green: #35C910;
+    --gray: #CACACA;
+    --gray2: #c4c4c4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 7vh 0;
+}
+
+h1, form label {
+    color: #fff;
+}
+
+h1 {
+    width: 50%;
+    margin-bottom: 8vh;
+    border-bottom: solid 2px var(--green);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    width: 50%;
+    padding: 5vh 0;
+    background-color: var(--black2);
+}
+
+section.form-cep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 6vh;
+    text-align: center;
+    border-bottom: 1px solid rgb(92, 92, 92);
+}
+
+form input {
+    width: 25%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--black2);
+    font-size: 1.7vh;
+    outline: none;
+    color: #fff;
+}
+
+form input::placeholder {
+    text-align: center;
+}
+
+.form-cep p {
+    color: var(--gray2);
+}
+
+.form-cep a {
+    text-decoration: none;
+    color: var(--gray2);
+}
+
+section.form-endereco {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+    padding: 4vh 0;
+    
+    border-bottom: 1px solid rgb(92, 92, 92);
+}
+
+.form-endereco div{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+
+    margin: 1rem;
+}
+
+.form-endereco div input {
+    width: 100%;
+}
+
+main button {
+    align-content: flex-end;
+    margin-top: 4vh;
+    padding: 2vh 1.5vw;
+    background-color: var(--green);
+    border: none;
+    border-radius: 11px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+main button:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
+}
+
+@media (max-width: 740px) {
+    form {
+        width: 18em;
+    }
+
+    h1 {
+        width: 18rem;
+    }
+}
