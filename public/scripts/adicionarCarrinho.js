@@ -117,8 +117,10 @@ const carregaTela = () => { //DOMContentLoaded não esperava que a página carre
 document.addEventListener('DOMContentLoaded', carregaTela)
 
 
-function resetarStorage(){
+function resetarStorage(e){
+    e.preventDefault();
     if(localStorage != null){
         localStorage.removeItem('lista')
+        carregaTela()
     }
 }

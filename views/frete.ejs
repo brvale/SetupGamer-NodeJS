@@ -20,10 +20,10 @@
     <main>
         <h1>FORMA DE ENTREGA</h1>
 
-        <form action="">
+        <form action="/checkout/frete" method="POST">
             <section class="form-frete">
                 <label class="form-control">
-                    <input type="radio" name="economico" />
+                    <input type="radio" value="1" name='transporte'/>
                         <span>
                             <strong>PAC Econômico</strong>
                             <small>Prazo de até 14 dias úteis</small>
@@ -32,7 +32,7 @@
                 </label>
 
                 <label class="form-control">
-                    <input type="radio" name="transportadora" />
+                    <input type="radio" value="2" name='transporte'/>
                         <span>
                             <strong>Transportadora</strong>
                             <small>Prazo de até 15 dias úteis</small>
@@ -41,7 +41,7 @@
                 </label>
 
                 <label class="form-control">
-                    <input type="radio" name="sedex" />
+                    <input type="radio" value="3" name='transporte'/>
                         <span>
                             <strong>SEDEX</strong>
                             <small>Prazo de até 9 dias úteis</small>

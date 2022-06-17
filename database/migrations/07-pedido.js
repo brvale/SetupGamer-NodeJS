@@ -29,23 +29,12 @@ module.exports = {
           key: 'id_endereco'
         }
       },
-      id_produto: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'produtos',
-          key: 'id_produto'
-        }
-      },
       id_frete: {
         type: Sequelize.INTEGER,
         references: {
           model: 'frete',
           key: 'id_frete'
         }
-      },
-      data: {
-        type: Sequelize.DATE,
-        allowNull: false
       },
       valor: {
         type: Sequelize.FLOAT,

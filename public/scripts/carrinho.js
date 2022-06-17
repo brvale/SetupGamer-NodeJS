@@ -1,7 +1,6 @@
 function adicionarNoCarrinho() {
     let lista = localStorage.getItem("lista") ?? '[]'
-    let carrinho = {};  
-    console.log(lista);
+
     return JSON.parse(lista);
 };
 
@@ -35,6 +34,22 @@ function alteraQuantidade(){
     spanQuantidade.style.backgroundColor = "white";
 
     link.style.textDecoration = "none";
+}
+
+function enviaCarrinho(e){
+    e.preventDefault();
+    const listaDeProdutos = adicionarNoCarrinho();
+
+    fetch("/checkout/carrinhoDeCompra", {
+        method: "POST",
+        body: JSON.stringify(listaDeProdutos),
+        headers: {
+            "Content-Type": "application/json"
+          }
+    }).then(response => {
+        localStorage.removeItem('lista');
+        location.href = `${location.protocol}//${location.host}/checkout/endereco`
+    }).catch(err => alert("compra não realizada" + err.message))
 }
 
 alteraQuantidade();

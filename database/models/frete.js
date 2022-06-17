@@ -12,6 +12,7 @@ module.exports = (sequelize, DataType) => {
     valor: DataType.FLOAT
   }, {
     tableName: 'frete',
+    timestamps: false
   });
   
   Frete.associate = (models) => {

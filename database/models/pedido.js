@@ -11,13 +11,11 @@ module.exports = (sequelize, DataType) => {
     id_cliente: DataType.INTEGER,
     id_pagamento: DataType.INTEGER,
     id_endereco: DataType.INTEGER,
-    id_produto: DataType.INTEGER,
     id_frete: DataType.INTEGER,
-    data: DataType.DATE,
     valor: DataType.FLOAT,
     status: DataType.STRING
   }, {
-    tableName: 'pedido',
+    tableName: 'pedidos',
     timestamps: true
   });
 

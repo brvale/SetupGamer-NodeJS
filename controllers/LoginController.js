@@ -7,12 +7,15 @@ let loginMethod = {
 
         let usuario = await Cliente.findOne({
             where: {
-                email: email,
-                senha: senha
+                email: email
             }
         });
 
-        if(usuario/* && !bcrypt.compareSync(senha, usuario.senha)*/){
+        if(!usuario){
+            return res.redirect("/#modal");
+        }
+
+        if(bcrypt.compareSync(senha, usuario.senha)){
             req.session.usuario = usuario;
             res.cookie("email", usuario, { maxAge: 500000})
             res.redirect('/')
@@ -21,15 +24,8 @@ let loginMethod = {
             res.redirect("/#modal");
         }
 
-        /*if(!bcrypt.compareSync(senha, usuario.senha)){
-            console
-        }*/
-
         console.log(usuario);
 
-        /*if(){
-
-        }*/
     }
 }
 
