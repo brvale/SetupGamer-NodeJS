@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 
 const app = express();
 const oneDay = 1000 * 60 * 60 * 24;
+const port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
@@ -30,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/", indexRouter);
 
-const port = process.env.PORT || 3000;
+
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
