@@ -1,27 +1,25 @@
-const Sequelize = require('sequelize');
 const { ListaProduto } = require('../database/models');
 
-
 const lista = {
-    salvarDadosCarrinhoUsuario: async ( req, res, next ) {
+    salvarDadosCarrinhoUsuario: async ( req, res, next ) => {
         const { cliente, produto, quantidade, valor } = req.body;
 
         const carrinho = {
-            cliente = req.session.usuario,
-            produto = lista,
+            cliente: req.session.usuario.id_cliente,
+            produto: produto,
             quantidade,
             valor
         };
 
         await ListaProduto.create({
-            where: { 
-                id_cliente: carrinho.cliente,
-                id_produto: lista,
-                quantidade,
-                valor
-            }
-        })
+            id_cliente: carrinho.cliente,
+            id_produto: carrinho.produto,
+            quantidade: carrinho.quantidade,
+            valor: carrinho.valor
+        });
         
-        const lista = req.session.produtos;
+        res.json({ success: true, message: 'Produto adicionado ao carrinho' });
     }
 }
+
+module.exports = lista;

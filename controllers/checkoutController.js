@@ -1,7 +1,4 @@
-const Sequelize = require('sequelize');
-const { EnderecoEntrega } = require('../database/models');
-
-const { Frete, Tipo_Pagamento, ListaProduto, Pedido } = require('../database/models');
+const { EnderecoEntrega, Frete, Tipo_Pagamento, ListaProduto, Pedido } = require('../database/models');
 
 module.exports = {
     endereco: async (req, res, next) => {
